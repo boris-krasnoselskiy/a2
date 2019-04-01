@@ -1,0 +1,53 @@
+<div class="container">
+  <section class="become">
+    <div class="top_line">
+      <h2 class="maps_before">Добавить компанию на сайт</h2>
+      <span (click)="goToback()" class="back_link blue_line" (click)="closeAllPanels()">
+          Вернуться
+      </span>
+    </div>
+    <p class="subtitle">Справочные данные компании вносятся на сайт бесплатно. После проверки заполненной анкеты информация о вашей компании будет добавлена в течение нескольких дней.</p>
+    <div class="form_wrap">
+      <form
+        (submit)="addCompany(name.value, phone.value, email.value, company_name.value)" 
+        class="contact_form">
+        <div class="input_wrap">
+          <label>Имя и фамилия контактного лица</label>
+          <input type="text" class="name" #name required>
+        </div>
+        <div class="input_wrap">
+          <label>Номер телефона</label>
+          <input type="text" class="phone" #phone required>
+        </div>
+        <div class="input_wrap">
+          <label>Электронная почта</label>
+          <input type="text" class="email" placeholder="example@mail.com" #email required>
+        </div>
+        <div class="input_wrap">
+          <label>Название компании</label>
+          <input type="text" class="company_name" placeholder="Например: Альфа, ООО, кафе у моря" #company_name required>
+        </div>
+        <button type="submit" class="btn yellow submit">Добавить компанию</button>
+        <div class="checkbox_row row">
+          <h2>Области в которых представлена компания</h2>
+          <div class="col-md-3 label_wrap">
+              <mat-checkbox 
+              class="example-margin" 
+              [(ngModel)]="region1"
+              [ngModelOptions]="{standalone: true}">Винницкая область</mat-checkbox>
+          </div>
+
+        </div>
+        <div class="checkbox_row row">
+          <h2>Сферы деятельности компании</h2>
+          <div class="col-md-3 label_wrap">
+              <mat-checkbox 
+              class="example-margin" 
+              [(ngModel)]="sphere1"
+              [ngModelOptions]="{standalone: true}">Автосервис</mat-checkbox>
+          </div>
+        </div>
+      </form>
+    </div>
+  </section>
+</div>

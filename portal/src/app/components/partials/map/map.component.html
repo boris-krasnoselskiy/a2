@@ -1,0 +1,36 @@
+<div *ngIf="!isDisableMap()">
+  
+  <!-- <agm-map 
+    class="map"
+    *ngFor="let map of getMapData | async"
+    [style.width.px]="mapWidth"
+    [latitude]="coordX"
+    [longitude]="coordY"
+    [styles]="styles"
+    [zoom]="convertString(map.zoom)"
+    [routerLink]="['/map_page/']"
+    #myMap
+    [ngClass]="{'not_expanded': !clicked, 'expanded': clicked}">
+
+    <div class="marker" *ngFor="let marker of map.markers">
+      <agm-marker
+        [iconUrl]="setIconColor(marker.pin_color)"
+        [latitude]="convertString(marker.latitude)"
+        [longitude]="convertString(marker.longitude)">
+      
+        <agm-info-window>
+          <div [innerHTML]="marker.content" class="marker_content"></div>
+          <a href="javascript:void(0);" class='stretched' (click)="callCompanyPanel()"></a>
+        </agm-info-window>
+
+      </agm-marker>
+    </div>
+  </agm-map> -->
+
+  <div
+    id="sidebarMap" 
+    class="map"
+    [style.width.px]="mapWidth"
+    [routerLink]="['/map_page/']"></div>
+</div>
+

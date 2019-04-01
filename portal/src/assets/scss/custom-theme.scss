@@ -1,0 +1,334 @@
+@import 'vars';
+
+.ui-fileupload {
+    .ui-fileupload-content {
+        // position: absolute;
+        // background: rgba(204, 204, 204, 0.404);
+        // left: 0;
+        // right: 0;
+        // top: 0;
+        // bottom: 0;
+        background: none;
+        border: none;
+        min-height: 325px;
+        z-index: 99999;
+    }
+    
+    .ui-fileupload-choose {
+        position: absolute;
+        top: 120px;
+        left: 0;
+        background: transparent!important;
+        height: 35px;
+        border: none!important;
+        font-size: 0;
+        width: 100%;
+        z-index: 999999;
+    }
+    
+    .ui-fileupload {
+        // button:last-of-type {
+        //     display: none;
+        // }
+        & > button:nth-of-type(1) {
+            position: absolute;
+            bottom: -77px;
+            left: 0;
+            font-size: 0;
+            width: 195px;
+            height: 50px;
+            background: transparent;
+            border-radius: 0;
+            border: none;
+        }
+        & > button:nth-of-type(2) {
+            background: url("../imgs/close_icon.png") no-repeat;
+            background-size: contain;
+            font-size: 0;
+            height: 20px;
+            width: 20px;
+            border: none;
+            border-radius: 0;
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            z-index: 1;
+            &:hover {
+                background: url("../imgs/close_icon.png") no-repeat!important;
+                border: none!important;
+                width: 20px;
+                height: 20px;
+                background-size: contain!important;
+            }
+        }
+    }
+    
+    .ui-button-icon-only .fa, 
+    .ui-button-text-icon-left .fa, 
+    .ui-button-text-icon-right .fa {
+        color: #fff;
+    }
+    
+    .ui-button-text-icon-left .ui-button-text {
+        color: #fff;
+    }
+
+    .ui-fileupload-files {
+        width: 100%;
+        text-align: left;
+    }
+    
+    .ui-fileupload-files img {
+        height: 100px;
+        width: auto;
+    }
+    
+    .ui-fileupload-buttonbar {
+        background: #fff;
+        border: none;
+    }
+    
+    .ui-fileupload-row {
+        width: 31%;
+        display: inline-block;
+        margin-left: 2%;
+        margin-bottom: 30px;
+        vertical-align: top;
+        & > div {
+            display: block;
+            padding: 0;
+            margin-right: 10px;
+        }
+    }
+    
+    .ui-widget, .ui-widget * {
+        text-align: left;
+    }
+    
+    .ui-widget-header .ui-button, 
+    .ui-widget-content .ui-button, 
+    .ui-widget.ui-button, .ui-button {
+        border: 1px solid #4bc76b;
+        background: #4bc76b;
+    }
+    
+    .ui-widget-header button:first-of-type {
+        background: #4bc76b;
+        position: absolute;
+        bottom: -78px;
+        left: 0;
+        width: 190px;
+        padding: 10px;
+        transition: all .35s;
+        cursor: pointer;
+        &:hover {
+            background: #ffaa31;
+            border: 1px solid #ffaa31;
+        }
+        .ui-button-text.ui-clickable:before {
+            content: "";
+            display: block;
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            top: 14px;
+            left: 15px;
+            background: url(../imgs/white_photo.png) no-repeat;
+            background-size: contain;
+            cursor: pointer;
+        }
+    }
+    
+    .ui-widget-header button:last-of-type {
+        background: $red;
+        border: 1px solid $red;
+        position: absolute;
+        bottom: -78px;
+        right: 0;
+        width: 205px;
+        padding: 10px;
+        transition: all .35s;
+        cursor: pointer;
+        &:hover {
+            background: #ffaa31;
+            border: 1px solid #ffaa31;
+        }
+        .ui-button-text.ui-clickable:before {
+            content: "";
+            display: block;
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            top: 14px;
+            left: 15px;
+            background: url(../imgs/white_photo.png) no-repeat;
+            background-size: contain;
+            cursor: pointer;
+        }
+    }
+    
+    .ui-button-text-icon-left .ui-button-text {
+        padding-left: 35px;
+    }
+    
+    .ui-button-icon-only .fa, 
+    .ui-button-text-icon-left .fa, 
+    .ui-button-text-icon-right .fa {
+        display: none;
+    }
+    
+    .ui-button-icon-only .fa {
+        top: 50%;
+        left: 50%;
+        margin-top: 0;
+        margin-left: 0;
+        text-align: center;
+        transform: translate(-50%, -50%);
+    }
+    
+    .ui-fileupload-row .fa {
+        display: block!important;
+    }
+    
+    .ui-button-icon-only {
+        display: none;
+    }
+}
+
+.drop_zone_mob {
+    .ui-fileupload {
+        .ui-fileupload-choose {
+            top: 123px;
+            height: 50px;
+        }
+        .ui-widget-header button:first-of-type,
+        .ui-widget-header button:last-of-type {
+            margin-bottom: 10px;
+            width: 100%;
+            position: relative;
+            bottom: 0;
+        }
+    }
+    .ui-fileupload-content {
+        min-height: 155px;
+    }
+}
+
+.mCS-dark-thin.mCSB_scrollTools .mCSB_draggerRail {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.column {
+    .mCS-light-thin.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, 
+    .mCS-dark-thin.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+        margin-top: 20px;
+        width: 4px;
+        background-color: #70b7ff!important;
+    }
+}
+
+.scrollable {
+    .mCS-light-thin.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, 
+    .mCS-dark-thin.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+        margin-top: 27px;
+        width: 4px;
+        background-color: #70b7ff !important;
+        margin-right: 20px;
+    }
+}
+
+.rubrics .scrollable {
+    .mCS-light-thin.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, 
+    .mCS-dark-thin.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+        margin-top: 0;
+    }
+}
+
+.mobile_rubric_content {
+    .mCS-light-thin.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, 
+    .mCS-dark-thin.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+		margin-top: 12px;
+	}
+}
+
+.addresses {
+    .mCS-light-thin.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, 
+    .mCS-dark-thin.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+        margin-top: 0;
+    }
+}
+
+.contacts .mat-content {
+    margin-right: -25px;
+    z-index: 1;
+}
+
+.leaflet-control-container {
+    display: none;
+}
+
+.leaflet-container a.leaflet-popup-close-button {
+    z-index: 9999;
+}
+
+.leaflet-popup-content-wrapper {
+    max-width: 300px;
+    border-radius: 0;
+    &:hover .place_type {
+        background: brown!important;
+    }
+}
+
+.leaflet-popup-content {
+    min-height: 90px;
+    min-width: 150px;
+    margin-bottom: 0;
+    h4 {
+        display: inline-block;
+        margin: 0;
+    }
+    .marker_content {
+        padding-right: 40px;
+    }
+    .place_type {
+        position: absolute;
+        bottom: 0px;
+        right: 0;
+        margin-bottom: 0;
+        transition: all .35s;
+    }
+}
+
+.mat-expansion-indicator:after {
+    color: #fff!important;
+}
+
+.mat-expansion-panel-header {
+    height: 48px!important;
+}
+
+@media (min-width: 320px) and (max-width: 680px) {
+	.ui-fileupload-files {
+		margin-top: 50px;
+		margin-bottom: 140px;
+    }
+    .ui-fileupload .ui-fileupload-row > div {
+        margin-right: 0;
+    }
+    .ui-fileupload .ui-fileupload-row {
+        width: 100%;
+    }
+	.ui-fileupload {
+        .ui-fileupload-buttonbar {
+            margin-bottom: 50px;
+        }
+		.ui-fileupload-row {
+			width: 100%;
+			margin-left: 0;
+			img {
+				height: auto;
+				width: 100%;
+			}
+		}
+	}
+}

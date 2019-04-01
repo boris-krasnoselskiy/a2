@@ -1,0 +1,434 @@
+@import '../../../assets/scss/vars';
+
+.presentaion {
+	margin-bottom: 15px;
+	.img_wrap {
+		position: relative;
+		margin-bottom: 15px;
+		min-height: 360px;
+		background-repeat: no-repeat!important;
+		background-size: cover!important;
+		.bott_line {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			right: 0;
+		}
+		.date {
+			font-size: 14px;
+			font-weight: 400;
+		}
+		.link {
+			a {
+				display: inline-block;
+				margin-right: 15px;
+			}
+		}
+	}
+	p {
+		margin-bottom: 20px;
+	}
+	.bott_line {
+		background: #fff;
+		width: 100%;
+	}
+	.link_wrap {
+		margin-top: 3px;
+		display: inline-block;
+		img {
+			margin: 0;
+		}
+	}
+	.add_photo {
+		margin-left: 30px;
+		margin-right: 10px;
+    display: inline-block;
+    width: 48px;
+    height: 42px;
+    padding: 9px 0;
+    text-align: center;
+    img {
+    	margin-right: 0;
+    }
+	}
+}
+
+.contacts, .map_info {
+	padding: 15px 20px 30px 60px;
+	h4 {
+		color: #fff;
+		font-size: 18px;
+		font-weight: 600;
+		line-height: 24px;
+		position: relative;
+		img {
+			position: absolute;
+			left: -37px;
+			top: 0;
+		}
+	}
+	.white_arrow {
+		display: inline-block;
+		width: 15px;
+		height: 9px;
+		background: url("../../../assets/imgs/white_arrow.png") no-repeat;
+		background-size: cover;
+		position: absolute;
+    top: 45%;
+    right: 0;
+    transform: translate(0, -50%);
+	}
+	ul {
+		padding-left: 0;
+		margin-bottom: 0;
+		li {
+			margin-bottom: 2px;
+		}
+		li, li a, span {
+			color: #fff;
+			font-size: 16px;
+			font-weight: 400;
+			line-height: 24px;
+		}
+		li a {
+			text-decoration: underline;
+		}
+	}
+	p, span {
+		color: #fff;
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 24px;
+	}
+	.closest {
+		li {
+			text-decoration: underline;
+			width: 80%;
+			margin-bottom: 0;
+		}
+	}
+	p {
+		text-decoration: underline;
+		width: 80%;
+		margin-bottom: 0;
+	}
+}
+
+.map_info {
+	.body {
+		ul {
+			margin-bottom: 10px;
+			li a, li span {
+				font-size: 16px;
+			}
+		}
+	}
+}
+
+.pb15 {
+	padding-bottom: 15px;
+}
+
+.news {
+	.contacts, .map_info {
+		padding-bottom: 15px;
+		.top_line {
+			margin-bottom: 15px;
+		}
+	}
+}
+
+.reviews {
+	.heading {
+		margin-bottom: 10px;
+	}
+	h3 {
+		display: inline-block;
+		margin-bottom: 40px;
+	}
+	.logo_wrap {
+		float: left;
+	}
+	.text {
+		margin-left: 65px;
+		h5 {
+			font-size: 16px;
+			font-weight: 600;
+			line-height: 18px;
+		}
+		p {
+			font-size: 14px;
+			line-height: 18px;
+			font-weight: 400;
+		}
+	}
+	.item {
+		margin-bottom: 45px;
+		.body {
+			p:last-of-type {
+				margin-bottom: 0;
+			}
+		}
+	}
+}
+
+.logo_wrap {
+	width: 48px;
+  height: 42px;
+  padding: 9px 0;
+  text-align: center;
+  img {
+  	margin: 0 auto;
+  }
+}
+
+.logo_wrap.male {
+	.male_icon {
+		display: block;
+	}
+	.female_icon {
+		display: none;
+	}
+}
+
+.logo_wrap.female {
+	.male_icon {
+		display: none;
+	}
+	.female_icon {
+		display: block;
+	}
+}
+
+.msg_wrap {
+	display: inline-block;
+	.msg_img {
+		margin-left: 30px;
+	  margin-right: 10px;
+	  display: inline-block;
+	  width: 48px;
+	  height: 42px;
+	  padding: 9px 0;
+	  text-align: center;
+	}
+}
+
+
+.date_wrap {
+	.icon_wrap {
+		display: inline-block;
+		width: 44px;
+		padding: 10px;
+		margin-top: 2px;
+	}
+	.date {
+		padding-left: 10px;
+		color: #000000;
+		font-size: 14px;
+		font-weight: 400;
+	}
+}
+
+.map_info {
+	margin-bottom: 2px;
+}
+
+.share {
+	padding-top: 22px;
+	span {
+		font-size: 16px;
+	}
+	.social {
+		display: inline-block;
+		padding-left: 20px;
+		li {
+			cursor: pointer;
+		}
+	}
+}
+
+aside {
+	margin-bottom: 30px;
+}
+
+.content {
+	h3 {
+		margin-top: 0;
+		font-weight: 600;
+		margin-bottom: 15px;
+	}
+	p {
+		margin-bottom: 25px;
+	}
+}
+
+.add_company {
+	text-align: left;
+	padding-left: 57px;
+	width: 100%;
+	color: #fff;
+	position: relative;
+	transition: all .35s;
+	&:hover {
+		opacity: .85;
+	}
+}
+
+.add_company:before {
+	content: '';
+	display: block;
+	width: 26px;
+	height: 20px;
+	position: absolute;
+	top: 50%;
+	left: 17px;
+	transform: translate(0, -50%);
+	background: url("../../../assets/imgs/deal_icon_white.png") no-repeat;
+	background-size: cover;
+}
+
+.yellow_border {
+	color: #000;
+	padding-left: 30px;
+	padding-right: 30px;
+}
+
+.btn_row {
+	margin-bottom: 35px;
+}
+
+.list_row {
+	margin-bottom: 60px;
+}
+
+.list_wrap {
+	h4 {
+		margin-top: 0;
+		margin-bottom: 10px;
+		font-size: 16px;
+		font-weight: 600;
+	}
+	ul {
+		margin-bottom: 45px;
+		padding-left: 0;
+		li, li a {
+			color: #000000;
+			font-size: 16px;
+			font-weight: 400;
+			line-height: 24px;
+			transition: all .35s;
+		}
+		li {
+			margin-bottom: 5px;
+		}
+		li a.active {
+			color: $green;
+			border-bottom: none;
+		}
+		li a:hover {
+			color: $green;
+			border-bottom: none;
+		}
+	}
+	ul:last-of-type {
+		margin-bottom: 0;
+	}
+}
+
+.inst {
+	margin-bottom: 60px;
+	ul {
+		padding-left: 0;
+		li {
+			display: inline-block;
+			img {
+				width: 100%;
+			}
+		}
+	}
+}
+
+@media (min-width: 320px) and (max-width: 991px) {
+	.inst {
+		ul, .list_row {
+			font-size: 0;
+		}
+	}
+	.presentaion {
+		.img_wrap .link a {
+			display: none;
+		}
+	}
+	.btn_row {
+		.btn {
+			width: 100%;
+			max-width: 300px;
+			margin-bottom: 10px;
+		}
+	}
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+	.inst {
+		li {
+			width: 100%;
+			img {
+				display: block;
+				margin: 0 auto 30px;
+				max-width: 300px;
+			}
+		}
+	}
+	.maps_before {
+		padding-right: 50px;
+	}
+}
+
+@media (min-width: 320px) and (max-width: 680px) {
+	.presentaion {
+		.add_photo {
+			margin-left: 0;
+		}
+	}
+}
+
+@media (min-width: 681px) and (max-width: 992px) {
+	.tags_wrap {
+    display: inline-block;
+    margin-right: 20px;
+	}
+	.reviews {
+		.item {
+			display: inline-block;
+			vertical-align: top;
+			width: 49.5%;
+		}
+	}
+}
+
+@media (min-width: 481px) and (max-width: 992px) {
+	.list_row {
+		font-size: 0;
+	}
+	.list_wrap {
+		vertical-align: top;
+		display: inline-block;
+		width: 50%;
+	}
+	.inst {
+		li {
+			width: 50%;
+			img {
+				display: block;
+				margin: 0 auto 30px;
+				max-width: 300px;
+			}
+		}
+	}
+}
+
+@media (min-width: 1300px) {
+	.container {
+    	margin-left: 0;
+	}
+}

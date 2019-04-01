@@ -1,0 +1,95 @@
+<div class="content">
+    <div class="container">
+      <section class="companies">
+        <div class="top_line">
+          <h2 class="maps_before">Познакомьтесь с нашими компаниями</h2>
+          <div class="link_wrap right">
+            <img src="assets/imgs/house_icon.png" alt="house_icon">
+            <a [routerLink]="['../add-company']" class="add_item blue_line">Добавить компанию</a>
+          </div>
+        </div>
+        <div class="items row">
+            <div class="company"
+                 #item
+                 [routerLink]="['/companies/', company.id ]"
+                 *ngFor="let company of companyStorage"
+                 [ngClass]="[company.width == '1' ? 'col-md-4' : '' 
+                            ||  company.width == '2' ? 'col-md-8' : '' 
+                            || company.width == '3' ? 'col-md-12' : '']"
+                 >
+              <div class="like_it red right">
+                 {{company.width}}
+                <img src="assets/imgs/flag_icon.png" alt="flag_icon">
+              </div>
+              <div class="img_wrap" [style.background]="'url('+company.company_logo+')'">
+                <div class="info_line">
+                  <h3>{{ company.title }}</h3>
+                  <div class="about_text">{{ company.about }}</div>
+                </div>
+              </div>
+              <div class="shadow">
+                <div class="hovered bott_line">
+                    <div class="place_type food" [style.background]="company.type_bg">
+                      <img src="{{ company.type_image }}" alt="food_icon">
+                    </div>
+                    <ul class="tags">
+                      <li *ngFor="let tag of company.tags">
+                        <a
+                          [routerLink]="['../search/',tag.text]" 
+                          class="blue_line">{{ tag.text }}</a>
+                      </li>
+                    </ul>
+                  </div>
+              </div>
+            </div>
+          </div>
+        <a href="javascript:void(0);" 
+           (click)="getMoreCompanies();"
+           *ngIf="isShowCompanyButton"
+           class="btn blue full_width btn-border">Показать еще</a>
+        <!-- end of items -->
+      </section>
+      <!-- end of companies -->
+
+      <section class="events">
+        <div class="top_line">
+          <h2>События и новости компаний</h2>
+        </div>
+        <div class="items row">
+          <div class="company"
+            [routerLink]="['/news/', event.id ]"
+            #item
+            *ngFor="let event of eventStorage"
+            [ngClass]="[event.width == '1' ? 'col-md-4' : '' ||  event.width == '2' ? 'col-md-8' : '' || event.width == '3' ? 'col-md-12' : '']">
+            <div class="like_it red right">
+              <img src="assets/imgs/flag_icon.png" alt="flag_icon">
+            </div>
+            <div class="img_wrap" [style.background]="'url('+event.image_src+')'">
+              <div class="info_line">
+                <h3>{{ event.title }}</h3>
+                <div class="about_text">{{ event.about }}</div>
+              </div>
+            </div>
+            <div class="shadow">
+              <div class="hovered bott_line">
+                  <div class="place_type food yellow">
+                    <img src="{{ event.type_image }}" alt="food_icon">
+                  </div>
+                  <ul class="tags">
+                    <li *ngFor="let tag of event.tags">
+                      <a [routerLink]="['../search/',tag.text]" class="blue_line">{{ tag.text }}</a>
+                    </li>
+                  </ul>
+                </div>
+            </div>
+          </div>
+        </div>
+        <a href="javascript:void(0);"
+           *ngIf="isShowEventsButton"
+           (click)="getMoreEvents();" 
+           class="btn blue full_width btn-border">Показать еще</a>
+        <!-- end of items -->
+      </section>
+      <!-- end of events -->
+    </div>
+  </div>

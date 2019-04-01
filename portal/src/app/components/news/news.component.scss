@@ -1,0 +1,140 @@
+@import '../../../assets/scss/vars';
+
+
+.news {
+    min-height: 55vh;
+}
+
+.companies, .events {
+	padding-top: 30px;
+	margin-bottom: 50px;
+	h2 {
+		position: relative;
+		display: inline-block;
+		margin-top: 0;
+		margin-left: -3px;
+		font-size: 34px;
+		font-weight: 300;
+	}
+	.top_line {
+		margin-bottom: 27px;
+	}
+	&:before {
+		content: '';
+		display: block;
+		width: 100%;
+		height: 10px;
+		background: url("../../../assets/imgs/gradient.png") repeat-x;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+}
+
+.items {
+	font-size: 0;
+}
+
+.events {
+	margin-bottom: 12px;
+}
+
+.tags {
+	margin-left: 60px;
+	margin-right: 60px;
+}
+
+.place_type, .like_it {
+	position: absolute;
+}
+
+.company {
+    cursor: pointer;
+	overflow: hidden;
+	position: relative;
+	margin-bottom: 25px;
+	.img_wrap {
+		height: 245px;
+		position: relative;
+		background-size: cover!important;
+		background-position: center!important;
+		img {
+			width: 100%;
+		}
+	}
+	.shadow {
+		display: none;
+		left: 15px;
+		right: 15px;
+	}
+	.hovered {
+		position: absolute;
+		top: -10px;
+	}
+	.like_it {
+		position: absolute;
+		right: 15px;
+		top: 0;
+		z-index: 9;
+		cursor: pointer;
+		transition: all .35s;
+		&:hover {
+			background: $green;
+		}
+	}
+	.info_line {
+		padding: 19px 0;
+		background-color: rgba(37, 95, 153, 0.5);
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		h3 {
+			text-align: center;
+			margin: 0;
+			text-shadow: 0 1px 2px rgba(37, 95, 153, 0.1);
+			color: #ffffff;
+			font-size: 19px;
+			font-weight: 400;
+		}
+		p {
+			margin-bottom: 0;
+		}
+	}
+	// &:hover .shadow {
+	// 	display: block;
+	// 	animation: fadeIn 1s;
+	// 	-webkit-animation: fadeIn 1s;
+	// 	-moz-animation: fadeIn 1s;
+	// 	-o-animation: fadeIn 1s;
+	// }
+}
+
+@media (min-width: 320px) and (max-width: 992px) {
+	.link_wrap {
+		float: none;
+	}
+	.company {
+		margin-bottom: 30px;
+	}
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+	.maps_before {
+		padding-right: 50px;
+	}
+}
+
+
+@media (min-width: 590px) and (max-width: 992px) {
+	.company {
+		display: inline-block;
+		width: 50%;
+	}
+}
+
+@media (min-width: 320px) and (max-width: 1300px) {
+	.map {
+		display: none;
+	}
+}

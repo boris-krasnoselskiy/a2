@@ -1,0 +1,118 @@
+@import '../../../../assets/scss/vars';
+
+.widgets {
+	position: absolute;
+	padding: 0;
+	li {
+		display: inline-block;
+		position: relative;
+    width: 45px;
+    height: 45px;
+		background: $blue;
+		margin-right: 15px;
+		transition: all .35s;
+		img {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+		&:hover {
+			background: $yellow;
+			animation: none;
+		}
+	}
+	li:not(:hover):first-of-type {
+		-webkit-animation: jump 0.8s ease 0s infinite normal ;
+		animation: jump 0.8s ease 0s infinite normal ;
+	}
+	li:not(:hover):last-of-type {
+		-webkit-animation: jump 0.8s ease 0s infinite normal ;
+		animation: jump 0.8s ease 0s infinite normal ;
+		animation-delay: 1s;
+	}
+}
+
+@-webkit-keyframes jump {
+	0% {
+	  -webkit-transform: scale(1.12);
+	  transform: scale(1.11);
+	}
+	20% {
+	  -webkit-transform: scale(1.145);
+	  transform: scale(1.14);
+	}
+	40% {
+	  -webkit-transform: scale(1.175);
+	  transform: scale(1.16);
+	}
+	50% {
+	  -webkit-transform: scale(1.19);
+	  transform: scale(1.18);
+	}
+	60% {
+	  -webkit-transform:scale(1.23);
+	  transform: scale(1.2);
+	}
+	70% {
+		-webkit-transform:scale(1.19);
+		transform: scale(1.18);
+	  }
+	80% {
+	  -webkit-transform: scale(1.16);
+	  transform: scale(1.16);
+	}
+	90% {
+		-webkit-transform: scale(1.14);
+		transform: scale(1.114);
+	  }
+	100% {
+	  -webkit-transform: scale(1.1);
+	  transform: scale(1.1);
+	}
+}
+  
+@keyframes jump {	
+	0% {
+		-webkit-transform: scale(1.12);
+		transform: scale(1.11);
+	}
+	20% {
+		-webkit-transform: scale(1.145);
+		transform: scale(1.14);
+	}
+	40% {
+		-webkit-transform: scale(1.175);
+		transform: scale(1.16);
+	}
+	50% {
+		-webkit-transform: scale(1.19);
+		transform: scale(1.18);
+	}
+	60% {
+		-webkit-transform:scale(1.23);
+		transform: scale(1.2);
+	}
+	70% {
+		-webkit-transform:scale(1.19);
+		transform: scale(1.18);
+	}
+	80% {
+		-webkit-transform: scale(1.16);
+		transform: scale(1.16);
+	}
+	90% {
+		-webkit-transform: scale(1.14);
+		transform: scale(1.114);
+	}
+	100% {
+		-webkit-transform: scale(1.1);
+		transform: scale(1.1);
+	}
+}
+
+@media (min-width: 320px) and (max-width: 1299px) {
+	.widgets {
+		display: none;
+    }
+}

@@ -1,0 +1,32 @@
+[
+    {
+        "latitude": 49.9886579,
+        "longitude": 36.2346626,
+        "updatedLatitude": 49.9999,
+        "updatedLongitude": 36.13,
+        "zoom": "13",
+        "markers": [
+            {
+                "id": "1",
+                "title": "Автоарт",
+                "latitude": "49.9886579",
+                "longitude": "36.2346626",
+                "content": "<span class='blue_line'>Автоарт, официальный дилер Тойота в Украине</span><p>Оригинальные запчасти для автомобилей Тойота с гарантией 1 год от производителя.</p><a href='/' class='blue_line'>32 филиала</a><div class='place_type food yellow'><img src='../assets/imgs/food_icon.png' alt='food_icon'></div>" 
+            },
+            {
+                "id": "2",
+                "title": "Авто",
+                "latitude": "49.997887",
+                "longitude": "36.266034",
+                "content": "<span class='blue_line'>Автоарт</span><p>Оригинальные запчасти для автомобилей Тойота с гарантией 1 год от производителя.</p><a href='/' class='blue_line'>32 филиала</a><div class='place_type food yellow'><img src='../assets/imgs/food_icon.png' alt='food_icon'></div>" 
+            },
+            {
+                "id": "3",
+                "title": "Арт",
+                "latitude": "49.9664826",
+                "longitude": "36.214192",
+                "content": "<span class='blue_line'>Тойота в Украине</span><p>Оригинальные запчасти для автомобилей Тойота с гарантией 1 год от производителя.</p><a href='/' class='blue_line'>32 филиала</a><div class='place_type food yellow'><img src='../assets/imgs/food_icon.png' alt='food_icon'></div>" 
+            }
+        ]
+    }
+]

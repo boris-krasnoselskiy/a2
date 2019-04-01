@@ -1,0 +1,141 @@
+@import '../../../assets/scss/vars';
+
+section {
+	min-height: 51.5vh;
+}
+
+.top_line {
+	margin-bottom: 17px;
+}
+
+h2 {
+	font-size: 34px;
+	font-weight: 300;
+}
+
+.mat-expansion-indicator::after, 
+.mat-expansion-panel-header-description {
+  color: rgba(0,0,0,.54)!important;
+}
+
+.item_wrap {
+  .item {
+	position: relative;
+    vertical-align: top;
+    display: inline-block;
+    width: 29.9%;
+	margin-right: 2%;
+	height: 48px;
+  }
+}
+
+.rubrics {
+	margin-bottom: 130px;
+	.item {
+		padding-left: 15px;
+		margin-bottom: 25px;
+		// overflow: hidden;
+		.mat-expansion-panel-body {
+			padding: 0;
+		}
+		.mat-expanded.mat-expansion-panel-content {
+			overflow: visible;
+			position: absolute;
+			background: #fff;
+			z-index: 1;
+			left: 0;
+			right: 0;
+			box-shadow: 
+				0 3px 1px -2px rgba(0,0,0,.2), 
+				0 2px 2px 0 rgba(0,0,0,.14), 
+				0 1px 5px 0 rgba(0,0,0,.12);
+		}
+		.mat-action-row {
+			overflow: hidden;
+		}
+		.title {
+			display: block;
+			margin-bottom: 5px;
+			color: #000;
+			font-size: 16px;
+			font-weight: 400;
+			line-height: 22px;
+			border-bottom: none;
+			text-decoration: underline;
+			-webkit-text-decoration-color: $blue; /* Safari */    
+			text-decoration-color: $blue;
+			transition: all .35s;
+	    &:hover {
+	    	color: $blue;
+	    }
+		}
+		ul {
+			width: 100%;
+			padding-left: 0;
+			height: 100px;
+			// overflow-y: scroll;
+			li {
+				cursor: pointer;
+				display: block;
+				position: relative;
+				margin-right: 25px;
+				margin-bottom: 5px;
+				color: #8f929a;
+				font-size: 16px;
+				font-weight: 400;
+				line-height: 22px;
+				transition: all .35s;
+				&:hover {
+					color: #000;
+				}
+				// &:after {
+				// 	content: "";
+				// 	display: block;
+				// 	height: 15px;
+				// 	width: 1px;
+				// 	background: #8f929a;
+				// 	position: absolute;
+				// 	top: 3px;
+				// 	right: -13px;
+				// }
+			}
+		}
+		p {
+			color: #8f929a;
+			font-size: 16px;
+			font-weight: 400;
+			line-height: 22px;
+		}
+	}
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+	.item_wrap {
+		width: 100%;
+		.item {
+			width: 95%;
+		}
+	}
+	.maps_before {
+		padding-right: 50px;
+	}
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+}
+
+@media (min-width: 481px) and (max-width: 679px) {
+	.item_wrap {
+		display: inline-block;
+		width: 49.5%;
+		vertical-align: top;
+	}
+}
+
+@media (min-width: 680px) and (max-width: 992px) {
+	.item_wrap {
+    display: inline-block;
+    width: 33%;
+    vertical-align: top;
+	}
+}

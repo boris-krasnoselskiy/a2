@@ -1,0 +1,42 @@
+<div class="container">
+  <section class="expand">
+    <div class="top_line">
+      <h2 class="maps_before">Расширьте свой бизнес вместе с нашими компаниями</h2>
+      <span (click)="goToback()" class="back_link blue_line" (click)="closeAllPanels()">
+          Вернуться
+      </span>
+    </div>
+    <div class="items row" >
+      <div class="company col-md-12" *ngFor="let franchises of franchisesData | async">
+        <div class="img_wrap col-md-4">
+          <img [src]="franchises.image_src" [alt]="franchises.title">
+        </div>
+        <div class="text_part col-md-8">
+          <h3>{{ franchises.title }}</h3>
+          <div [innerHTML]="franchises.text"></div>
+          <div class="tags_row">
+            <div class="place_type" [style.background]="franchises.type_image_bg">
+              <img [src]="franchises.type_image_src" [alt]="franchises.type_image_title">
+            </div>
+            <ul class="tags">
+              <li *ngFor="let tag of franchises.tags">
+                <a [routerLink]="['../search/',tag.text]"  class="blue_line">{{ tag.text }}</a>
+              </li>
+            </ul>
+            <div class="link">
+              <div class="blue place_type">
+                <img src="assets/imgs/link_icon.png" alt="link_icon">
+              </div>
+              <a [href]="franchises.url" target="_blank" class="blue_line">{{ franchises.url }}</a>
+            </div>
+          </div>
+          <a [routerLink]="['../become', franchises.id]" class="btn border_btn deal_btn yellow_border deal">Получить условия</a>
+        </div>
+      </div>
+      <!-- end of company -->
+    </div>
+    <a href="javascript:void(0);" class="btn blue full_width btn-border">Показать еще</a>
+    <!-- end of items -->
+  </section>
+  <!-- end of companies -->
+</div>

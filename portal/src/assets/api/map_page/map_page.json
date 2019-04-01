@@ -1,0 +1,415 @@
+[
+    {
+        "latitude": 49.9993,
+        "longitude": 36.229,
+        "updatedLatitude": "49.9993",
+        "updatedLongitude": "36.229",
+        "networks": [
+            {
+                "id": 1,
+                "title": "Рога рядом и работает сейчас",
+                "logo": "assets\/imgs\/logo_2.png",
+                "latitude": "49.9975014",
+                "longitude": "36.2389984",
+                "tags": [
+                    {
+                        "id": 1,
+                        "text": "Крафтовое пиво",
+                        "sector": "search\/kraftovoe-pivos"
+                    },
+                    {
+                        "id": 2,
+                        "text": "Американская кухня",
+                        "sector": "search\/amerikanskaya-kuhnyas"
+                    },
+                    {
+                        "id": 3,
+                        "text": "Европейская кухня",
+                        "sector": "search\/evropejskaya-kuhnyas"
+                    },
+                    {
+                        "id": 4,
+                        "text": "Винная карта",
+                        "sector": "search\/vinnaya-kartas"
+                    }
+                ],
+                "points": [
+                    {
+                        "id": 1,
+                        "title": "Рога на проспекте Науки",
+                        "latitude": "50.0412300",
+                        "longitude": "36.2220430",
+                        "adress": "проспект Науки, д. 87Б ",
+                        "content": "<p>краткое описание данной Рога на проспекте науки<\/p>",
+                        "pin_color": "#ffb14b",
+                        "type_img": "assets\/imgs\/food_icon.png",
+                        "points_num": "2"
+                    },
+                    {
+                        "id": 5,
+                        "title": "Рога на Пушкинской",
+                        "latitude": "50.0000000",
+                        "longitude": "36.2400000",
+                        "adress": "улица Пушкинская д.17",
+                        "content": "<p>краткое описание данной точкиРога на Людвига Свободы<\/p>",
+                        "pin_color": "#ffb14b",
+                        "type_img": "assets\/imgs\/food_icon.png",
+                        "points_num": "2"
+                    }
+                ]
+            },
+            {
+                "id": 2,
+                "title": "Кулиничи",
+                "logo": "assets\/imgs\/logo_1.png",
+                "latitude": "50.0024796",
+                "longitude": "36.2495728",
+                "tags": [
+                    {
+                        "id": 1,
+                        "text": "Крафтовое пиво",
+                        "sector": "search\/kraftovoe-pivos"
+                    },
+                    {
+                        "id": 2,
+                        "text": "Американская кухня",
+                        "sector": "search\/amerikanskaya-kuhnyas"
+                    },
+                    {
+                        "id": 3,
+                        "text": "Европейская кухня",
+                        "sector": "search\/evropejskaya-kuhnyas"
+                    },
+                    {
+                        "id": 4,
+                        "text": "Винная карта",
+                        "sector": "search\/vinnaya-kartas"
+                    }
+                ],
+                "points": [
+                    {
+                        "id": 2,
+                        "title": "Кулиничи на советской",
+                        "latitude": "49.9917890",
+                        "longitude": "36.2314220",
+                        "adress": "Університетська вулиця, 5",
+                        "content": "<p>краткое описание данной точки Кулиничи<\/p>",
+                        "pin_color": "#ffb14b",
+                        "type_img": "assets\/imgs\/food_icon.png",
+                        "points_num": "3"
+                    },
+                    {
+                        "id": 7,
+                        "title": "title",
+                        "latitude": "50.0000000",
+                        "longitude": "36.0000000",
+                        "adress": "адрес",
+                        "content": "content",
+                        "pin_color": "#ffb14b",
+                        "type_img": "assets\/imgs\/food_icon.png",
+                        "points_num": "3"
+                    },
+                    {
+                        "id": 23,
+                        "title": "123",
+                        "latitude": "123.0000000",
+                        "longitude": "123.0000000",
+                        "adress": "123",
+                        "content": "123",
+                        "pin_color": "#ffb14b",
+                        "type_img": "assets\/imgs\/food_icon.png",
+                        "points_num": "3"
+                    }
+                ]
+            },
+            {
+                "id": 3,
+                "title": "Арома Кава",
+                "logo": "assets\/imgs\/logo_2.png",
+                "latitude": "49.9887009",
+                "longitude": "36.2669983",
+                "tags": [
+                    {
+                        "id": 1,
+                        "text": "Крафтовое пиво",
+                        "sector": "search\/kraftovoe-pivos"
+                    },
+                    {
+                        "id": 2,
+                        "text": "Американская кухня",
+                        "sector": "search\/amerikanskaya-kuhnyas"
+                    },
+                    {
+                        "id": 3,
+                        "text": "Европейская кухня",
+                        "sector": "search\/evropejskaya-kuhnyas"
+                    },
+                    {
+                        "id": 4,
+                        "text": "Винная карта",
+                        "sector": "search\/vinnaya-kartas"
+                    }
+                ],
+                "points": [
+                    {
+                        "id": 3,
+                        "title": "Аромакава на бекетова",
+                        "latitude": "49.9989500",
+                        "longitude": "36.2411580",
+                        "adress": "вулиця Пушкінська, 41",
+                        "content": "<p>краткое описание данной точки арома кава на бекетова<\/p>",
+                        "pin_color": "#ffb14b",
+                        "type_img": "assets\/imgs\/food_icon.png",
+                        "points_num": "1"
+                    }
+                ]
+            },
+            {
+                "id": 4,
+                "title": "ХМК",
+                "logo": "assets\/imgs\/logo_2.png",
+                "latitude": "49.9887009",
+                "longitude": "36.2669983",
+                "tags": [
+                    {
+                        "id": 1,
+                        "text": "Крафтовое пиво",
+                        "sector": "search\/kraftovoe-pivos"
+                    },
+                    {
+                        "id": 2,
+                        "text": "Американская кухня",
+                        "sector": "search\/amerikanskaya-kuhnyas"
+                    },
+                    {
+                        "id": 3,
+                        "text": "Европейская кухня",
+                        "sector": "search\/evropejskaya-kuhnyas"
+                    },
+                    {
+                        "id": 4,
+                        "text": "Винная карта",
+                        "sector": "search\/vinnaya-kartas"
+                    }
+                ],
+                "points": [
+                    {
+                        "id": 4,
+                        "title": "магазин ХМК возле комбината",
+                        "latitude": "49.9673110",
+                        "longitude": "36.2586780",
+                        "adress": "проспект Гагаріна, 123",
+                        "content": "<p>краткое описание данной точки ХМК<\/p>",
+                        "pin_color": "#ffb14b",
+                        "type_img": "assets\/imgs\/food_icon.png",
+                        "points_num": "1"
+                    }
+                ]
+            },
+            {
+                "id": 5,
+                "title": "Пробка",
+                "logo": "assets\/imgs\/logo_2.png",
+                "latitude": "49.9887009",
+                "longitude": "36.2669983",
+                "tags": [
+                    {
+                        "id": 1,
+                        "text": "Крафтовое пиво",
+                        "sector": "search\/kraftovoe-pivos"
+                    },
+                    {
+                        "id": 2,
+                        "text": "Американская кухня",
+                        "sector": "search\/amerikanskaya-kuhnyas"
+                    },
+                    {
+                        "id": 3,
+                        "text": "Европейская кухня",
+                        "sector": "search\/evropejskaya-kuhnyas"
+                    },
+                    {
+                        "id": 4,
+                        "text": "Винная карта",
+                        "sector": "search\/vinnaya-kartas"
+                    }
+                ],
+                "points": []
+            },
+            {
+                "id": 6,
+                "title": "Цитрус",
+                "logo": "assets\/imgs\/logo_1.png",
+                "latitude": "49.9887009",
+                "longitude": "36.2659988",
+                "tags": [
+                    {
+                        "id": 1,
+                        "text": "Крафтовое пиво",
+                        "sector": "search\/kraftovoe-pivos"
+                    },
+                    {
+                        "id": 2,
+                        "text": "Американская кухня",
+                        "sector": "search\/amerikanskaya-kuhnyas"
+                    },
+                    {
+                        "id": 3,
+                        "text": "Европейская кухня",
+                        "sector": "search\/evropejskaya-kuhnyas"
+                    },
+                    {
+                        "id": 4,
+                        "text": "Винная карта",
+                        "sector": "search\/vinnaya-kartas"
+                    }
+                ],
+                "points": []
+            },
+            {
+                "id": 7,
+                "title": "Рост",
+                "logo": "assets\/imgs\/logo_1.png",
+                "latitude": "49.9887009",
+                "longitude": "36.2659988",
+                "tags": [
+                    {
+                        "id": 1,
+                        "text": "Крафтовое пиво",
+                        "sector": "search\/kraftovoe-pivos"
+                    },
+                    {
+                        "id": 2,
+                        "text": "Американская кухня",
+                        "sector": "search\/amerikanskaya-kuhnyas"
+                    },
+                    {
+                        "id": 3,
+                        "text": "Европейская кухня",
+                        "sector": "search\/evropejskaya-kuhnyas"
+                    },
+                    {
+                        "id": 4,
+                        "text": "Винная карта",
+                        "sector": "search\/vinnaya-kartas"
+                    }
+                ],
+                "points": [
+                    {
+                        "id": 6,
+                        "title": "РОСТ Алексеевский",
+                        "latitude": "50.0610180",
+                        "longitude": "36.2023990",
+                        "adress": "проспект Перемоги, 61Ж",
+                        "content": "<p>краткое описание данной точки РОСТ Алексеевский<\/p>",
+                        "pin_color": "#ffb14b",
+                        "type_img": "assets\/imgs\/food_icon.png",
+                        "points_num": "1"
+                    }
+                ]
+            },
+            {
+                "id": 11,
+                "title": "Олька",
+                "logo": "assets\/imgs\/logo_2.png",
+                "latitude": "49.9808998",
+                "longitude": "47.2433014",
+                "tags": [
+                    {
+                        "id": 1,
+                        "text": "Крафтовое пиво",
+                        "sector": "search\/kraftovoe-pivos"
+                    },
+                    {
+                        "id": 2,
+                        "text": "Американская кухня",
+                        "sector": "search\/amerikanskaya-kuhnyas"
+                    },
+                    {
+                        "id": 3,
+                        "text": "Европейская кухня",
+                        "sector": "search\/evropejskaya-kuhnyas"
+                    },
+                    {
+                        "id": 4,
+                        "text": "Винная карта",
+                        "sector": "search\/vinnaya-kartas"
+                    }
+                ],
+                "points": [
+                    {
+                        "id": 8,
+                        "title": "титулка",
+                        "latitude": "49.0000000",
+                        "longitude": "36.0000000",
+                        "adress": "адрес",
+                        "content": "контент",
+                        "pin_color": "#4bc76b",
+                        "type_img": "assets\/imgs\/fueling_icon.png",
+                        "points_num": "1"
+                    }
+                ]
+            },
+            {
+                "id": 16,
+                "title": "123",
+                "logo": "http:\/\/apiportal.web14.com.ua\/uploads\/images\/a631a8d1bf125dc09208397bbc810ebbphpqpHMCB.png",
+                "latitude": "21.0000000",
+                "longitude": "12.0000000",
+                "tags": [
+                    {
+                        "id": 1,
+                        "text": "Крафтовое пиво",
+                        "sector": "search\/kraftovoe-pivos"
+                    },
+                    {
+                        "id": 2,
+                        "text": "Американская кухня",
+                        "sector": "search\/amerikanskaya-kuhnyas"
+                    },
+                    {
+                        "id": 3,
+                        "text": "Европейская кухня",
+                        "sector": "search\/evropejskaya-kuhnyas"
+                    },
+                    {
+                        "id": 4,
+                        "text": "Винная карта",
+                        "sector": "search\/vinnaya-kartas"
+                    }
+                ],
+                "points": []
+            },
+            {
+                "id": 17,
+                "title": "123",
+                "logo": "http:\/\/apiportal.web14.com.ua\/uploads\/images\/2a30d0d87a8802e25247d6e773573b12php1TCBQk.png",
+                "latitude": "21.0000000",
+                "longitude": "12.0000000",
+                "tags": [
+                    {
+                        "id": 1,
+                        "text": "Крафтовое пиво",
+                        "sector": "search\/kraftovoe-pivos"
+                    },
+                    {
+                        "id": 2,
+                        "text": "Американская кухня",
+                        "sector": "search\/amerikanskaya-kuhnyas"
+                    },
+                    {
+                        "id": 3,
+                        "text": "Европейская кухня",
+                        "sector": "search\/evropejskaya-kuhnyas"
+                    },
+                    {
+                        "id": 4,
+                        "text": "Винная карта",
+                        "sector": "search\/vinnaya-kartas"
+                    }
+                ],
+                "points": []
+            }
+        ]
+    }
+]

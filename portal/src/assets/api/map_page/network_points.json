@@ -1,0 +1,102 @@
+[
+  {
+    "id": "1",
+    "url": "1",
+    "title": "Бутик 1",
+    "latitude": "49.9196579",
+    "longitude": "36.1946626",
+    "adress": "ул. Пушкинская, д. 43",
+    "work_time": "С 10:00 до 16:30",
+    "content": "<span class='blue_line'>Бутик 1</span><p>Описание для бутика</p><a href='/' class='blue_line'>32 филиала</a><div class='place_type food yellow'><img src='../assets/imgs/food_icon.png' alt='food_icon'></div>" 
+  },
+  {
+    "id": "2",
+    "url": "2",
+    "title": "Бутик 1",
+    "latitude": "49.991887",
+    "longitude": "36.296034",
+    "adress": "ул. Пушкинская, д. 42",
+    "work_time": "С 10:00 до 16:30",
+    "content": "<span class='blue_line'>Бутик 2</span><p>Описание для бутика 2</p><a href='/' class='blue_line'>32 филиала</a><div class='place_type food yellow'><img src='../assets/imgs/food_icon.png' alt='food_icon'></div>"               
+  },
+  {
+    "id": "121777",
+    "url": "121777-butik",
+    "title": "Бутик 1",
+    "latitude": "49.9196579",
+    "longitude": "36.1946626",
+    "adress": "ул. Пушкинская, д. 43",
+    "work_time": "С 10:00 до 16:30",
+    "content": "<span class='blue_line'>Бутик 1</span><p>Описание для бутика</p><a href='/' class='blue_line'>32 филиала</a><div class='place_type food yellow'><img src='../assets/imgs/food_icon.png' alt='food_icon'></div>" 
+  },
+  {
+    "id": "121778",
+    "url": "121778-butik",
+    "title": "Бутик 1",
+    "latitude": "49.991887",
+    "longitude": "36.296034",
+    "adress": "ул. Пушкинская, д. 42",
+    "work_time": "С 10:00 до 16:30",
+    "content": "<span class='blue_line'>Бутик 2</span><p>Описание для бутика 2</p><a href='/' class='blue_line'>32 филиала</a><div class='place_type food yellow'><img src='../assets/imgs/food_icon.png' alt='food_icon'></div>"               
+  },
+  {
+    "id": "121777",
+    "url": "121777-butik",
+    "title": "Бутик 1",
+    "latitude": "49.9196579",
+    "longitude": "36.1946626",
+    "adress": "ул. Пушкинская, д. 43",
+    "work_time": "С 10:00 до 16:30",
+    "content": "<span class='blue_line'>Бутик 1</span><p>Описание для бутика</p><a href='/' class='blue_line'>32 филиала</a><div class='place_type food yellow'><img src='../assets/imgs/food_icon.png' alt='food_icon'></div>" 
+  },
+  {
+    "id": "121778",
+    "url": "121778-butik",
+    "title": "Бутик 1",
+    "latitude": "49.991887",
+    "longitude": "36.296034",
+    "adress": "ул. Пушкинская, д. 42",
+    "work_time": "С 10:00 до 16:30",
+    "content": "<span class='blue_line'>Бутик 2</span><p>Описание для бутика 2</p><a href='/' class='blue_line'>32 филиала</a><div class='place_type food yellow'><img src='../assets/imgs/food_icon.png' alt='food_icon'></div>"               
+  },
+  {
+    "id": "121777",
+    "url": "121777-butik",
+    "title": "Бутик 1",
+    "latitude": "49.9196579",
+    "longitude": "36.1946626",
+    "adress": "ул. Пушкинская, д. 43",
+    "work_time": "С 10:00 до 16:30",
+    "content": "<span class='blue_line'>Бутик 1</span><p>Описание для бутика</p><a href='/' class='blue_line'>32 филиала</a><div class='place_type food yellow'><img src='../assets/imgs/food_icon.png' alt='food_icon'></div>" 
+  },
+  {
+    "id": "121778",
+    "url": "121778-butik",
+    "title": "Бутик 1",
+    "latitude": "49.991887",
+    "longitude": "36.296034",
+    "adress": "ул. Пушкинская, д. 42",
+    "work_time": "С 10:00 до 16:30",
+    "content": "<span class='blue_line'>Бутик 2</span><p>Описание для бутика 2</p><a href='/' class='blue_line'>32 филиала</a><div class='place_type food yellow'><img src='../assets/imgs/food_icon.png' alt='food_icon'></div>"               
+  },
+  {
+    "id": "121777",
+    "url": "121777-butik",
+    "title": "Бутик 1",
+    "latitude": "49.9196579",
+    "longitude": "36.1946626",
+    "adress": "ул. Пушкинская, д. 43",
+    "work_time": "С 10:00 до 16:30",
+    "content": "<span class='blue_line'>Бутик 1</span><p>Описание для бутика</p><a href='/' class='blue_line'>32 филиала</a><div class='place_type food yellow'><img src='../assets/imgs/food_icon.png' alt='food_icon'></div>" 
+  },
+  {
+    "id": "121778",
+    "url": "121778-butik",
+    "title": "Бутик 1",
+    "latitude": "49.991887",
+    "longitude": "36.296034",
+    "adress": "ул. Пушкинская, д. 42",
+    "work_time": "С 10:00 до 16:30",
+    "content": "<span class='blue_line'>Бутик 2</span><p>Описание для бутика 2</p><a href='/' class='blue_line'>32 филиала</a><div class='place_type food yellow'><img src='../assets/imgs/food_icon.png' alt='food_icon'></div>"               
+  }
+]

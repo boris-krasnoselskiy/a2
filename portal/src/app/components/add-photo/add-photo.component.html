@@ -1,0 +1,63 @@
+<div class="container">
+    <section class="add_photo" *ngFor="let point of pointData | async">
+      <div class="top_line">
+         <h2 class="maps_before">Добавить фото</h2>
+         <h2 class="second">{{ point.title }}</h2>
+         <h2 class="address">
+          <img src="assets/imgs/pin.png" class="pin" alt="pin">
+          <p class="blue_line">{{ point.address }}</p>
+         </h2>
+         <span (click)="goToback()" class="back_link blue_line" (click)="closeAllPanels()">
+            Вернуться
+        </span>
+        </div>
+        <div class="drop_zone_mob">
+          <p-fileUpload
+          uploadLabel="Отправить фото"
+          cancelLabel="Удалить фото"
+          (onSelect)="selectPhotos()"
+          (onClear)="removePhotos()"
+          (onUpload)="onUpload($event)"
+          name="myfile[]" 
+          accept="image/*" 
+          [url]="url" 
+          multiple="multiple">
+        </p-fileUpload>
+        <button class="mobile_text yellow">
+          <img src="assets/imgs/white_photo.png" alt="white_photo">
+          Выберите файлы
+        </button>    
+        </div>
+      <div class="drop_zone">
+        <p-fileUpload
+          uploadLabel="Отправить фото"
+          cancelLabel="Удалить фото"
+          (onSelect)="selectPhotos()"
+          (onClear)="removePhotos()"
+          (onUpload)="onUpload($event)"
+          name="myfile[]" 
+          accept="image/*" 
+          [url]="url" 
+          multiple="multiple">
+        </p-fileUpload>
+    
+        <div class="centered" *ngIf="isNotUpladed">
+          <a href="/" class="blue_line choose">Выберите фотографию на своем компьютере</a>
+          <span class="or">или</span>
+          <p>Перетащите ее в эту область</p>
+        </div>
+    
+      </div>
+      <!-- <div class="bott_line">
+        <button class="btn green add_photo">
+          <img src="assets/imgs/white_photo.png" alt="white_photo">
+          Добавить фото
+        </button>
+    
+        <div class="prewiev">
+          <img src="assets/imgs/yellow_eye.png" alt="yellow_eye">
+          <a href="/" class="blue_line">Предварительный просмотр фото</a>
+        </div>
+      </div> -->
+      </section>
+</div>

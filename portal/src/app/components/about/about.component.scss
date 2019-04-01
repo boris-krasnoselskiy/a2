@@ -1,0 +1,86 @@
+@import '../../../assets/scss/vars';
+
+section {
+    min-height: 53vh;
+}
+
+.about {
+	p {
+		margin-bottom: 20px;
+	}
+}
+
+.contacts {
+	padding: 15px 60px;
+	margin-bottom: 2px;
+	h4 {
+		color: #fff;
+		font-size: 18px;
+		font-weight: 600;
+		line-height: 24px;
+		position: relative;
+		img {
+			position: absolute;
+			left: -37px;
+			top: 0;
+		}
+	}
+	ul {
+		padding-left: 0;
+		li, li a {
+			color: #fff;
+			font-size: 16px;
+			font-weight: 400;
+			line-height: 24px;
+		}
+		li a {
+			text-decoration: underline;
+		}
+	}
+}
+
+.share {
+	padding-top: 22px;
+	span {
+		font-size: 16px;
+	}
+	.social {
+		display: inline-block;
+    padding-left: 20px;
+	}
+}
+
+.add_company {
+	width: 100%;
+	color: #fff;
+	position: relative;
+	transition: all .35s;
+	&:hover {
+		opacity: .85;
+	}
+}
+
+.add_company:before {
+	content: '';
+	display: block;
+	width: 32px;
+	height: 27px;
+	position: absolute;
+	top: 50%;
+	left: 17px;
+	transform: translate(0, -50%);
+	background: url("../../../assets/imgs/company_white.png") no-repeat;
+	background-size: cover;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+	.maps_before {
+		padding-right: 50px;
+	}
+}
+
+@media (min-width: 1300px) {
+	.container {
+    	margin-left: 0;
+	}
+}

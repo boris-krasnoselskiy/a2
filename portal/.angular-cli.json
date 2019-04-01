@@ -1,0 +1,87 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "project": {
+    "name": "portal"
+  },
+  "apps": [
+    {
+      "root": "src",
+      "outDir": "api",
+      "assets": [
+        "assets",
+        "favicon.ico",
+        "assets/api/",
+        "assets/images/",
+        {
+  "glob": "**/*",
+  "input": "../node_modules/leaflet/dist/images",
+  "output": "./assets/",
+  "allowOutsideOutDir": false
+}
+      ],
+      "index": "index.html",
+      "main": "main.ts",
+      "polyfills": "polyfills.ts",
+      "test": "test.ts",
+      "tsconfig": "tsconfig.app.json",
+      "testTsconfig": "tsconfig.spec.json",
+      "prefix": "app",
+      "styles": [
+        "../node_modules/bootstrap/dist/css/bootstrap.css",
+        "../node_modules/leaflet/dist/leaflet.css",
+        "../node_modules/font-awesome/css/font-awesome.css",
+        "../node_modules/primeng/resources/primeng.min.css",
+        "./assets/libs/slick.css",
+        "./assets/libs/slick-theme.css",
+        "../node_modules/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css",
+        "./assets/scss/custom-theme.scss",
+        "assets/scss/main.scss"
+      ],
+      "scripts": [
+        "../node_modules/jquery/dist/jquery.min.js",
+        "./assets/libs/slick.js",
+        "./assets/libs/leaflet.js",
+        "./assets/libs/leaflet-providers.js",
+        "../node_modules/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"
+      ],
+      "environmentSource": "environments/environment.ts",
+      "environments": {
+        "dev": "environments/environment.ts",
+        "prod": "environments/environment.prod.ts"
+      }
+    }
+  ],
+  "e2e": {
+    "protractor": {
+      "config": "./protractor.conf.js"
+    }
+  },
+  "lint": [
+    {
+      "project": "src/tsconfig.app.json"
+    },
+    {
+      "project": "src/tsconfig.spec.json"
+    },
+    {
+      "project": "e2e/tsconfig.e2e.json"
+    }
+  ],
+  "test": {
+    "karma": {
+      "config": "./karma.conf.js"
+    }
+  },
+  "defaults": {
+    "styleExt": "scss",
+    "component": {
+    },
+    "serve": {
+      "port": 8080,
+      "host": "localhost"
+    }
+  },
+  "warnings": {
+    "typescriptMismatch": false
+  }
+}

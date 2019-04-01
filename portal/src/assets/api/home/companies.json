@@ -1,0 +1,65 @@
+[
+    {
+        "id": "1",
+        "src": "assets/imgs/logo_2.png",
+        "title": "js Сеть кофеен «Арома кава»",
+        "type_src": "assets/imgs/food_icon.png",
+        "width": "third",
+        "tags": [
+            {
+                "text": "Кафе",
+                "sector": "cafe"
+            },
+            {
+                "text": "Рестораны",
+                "sector": "restaraunt"
+            },
+            {
+                "text": "Другое",
+                "sector": "more"
+            }
+        ]
+    },
+    {   
+        "id": "2",
+        "src": "assets/imgs/logo_1.png",
+        "title": "js Сеть кофеен «Арома",
+        "width": "two_thirds",
+        "type_src": "assets/imgs/food_icon.png",
+        "tags": [
+            {
+                "text": "jКафе",
+                "sector": "cafe"
+            },
+            {
+                "text": "jРестораны",
+                "sector": "restaraunt"
+            },
+            {
+                "text": "jДругое",
+                "sector": "more"
+            }
+        ]
+    },
+    {
+        "id": "3",
+        "src": "assets/imgs/logo_1.png",
+        "title": "js Сеть кофеен «Арома",
+        "width": "three_thirds",
+        "type_src": "assets/imgs/food_icon.png",
+        "tags": [
+            {
+                "text": "jКафе",
+                "sector": "cafe"
+            },
+            {
+                "text": "jРестораны",
+                "sector": "restaraunt"
+            },
+            {
+                "text": "jДругое",
+                "sector": "more"
+            }
+        ]
+    }
+]

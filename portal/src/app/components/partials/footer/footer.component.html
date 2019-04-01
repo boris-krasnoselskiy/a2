@@ -1,0 +1,33 @@
+<footer *ngIf="router.url != '/map_page'">
+	<div class="container">
+		<div class="copy">&copy; 1988−2017 Самая лучшая компания</div>
+
+		<ul>
+			<li><a [routerLink]="['../about']"  class="blue_line">О компании</a></li>
+			<li><a [routerLink]="['../franchises']" class="blue_line">Для бизнеса</a></li>
+		</ul>
+
+		<ul class="social right">
+			<li>
+				<a href="/" class="facebook">
+					<i class="fa fa-facebook" aria-hidden="true"></i>
+				</a>
+			</li>
+			<li>
+				<a href="/" class="linked">
+					<i class="fa fa-linkedin" aria-hidden="true"></i>
+				</a>
+			</li>
+			<li>
+				<a href="/" class="inst">
+					<i class="fa fa-instagram" aria-hidden="true"></i>
+				</a>
+			</li>
+			<li>
+				<a href="/" class="tweet">
+					<i class="fa fa-twitter" aria-hidden="true"></i>
+				</a>
+			</li>
+		</ul>
+	</div>
+</footer>

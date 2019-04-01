@@ -1,0 +1,28 @@
+<div class="container">
+  <section class="become">
+    <div class="top_line">
+      <h2 class="maps_before">Стать нашим партнером просто!</h2>
+      <span (click)="goToback()" class="back_link blue_line" (click)="closeAllPanels()">
+          Вернуться
+      </span>
+    </div>
+    <p class="subtitle">Укажите ваши контактные данные и мы вышлем вам документы с полным описанием условий франшизы.</p>
+    <form 
+      (submit)="sendFeedback(name.value, phone.value, email.value)"  
+      class="contact_form col-md-5">
+      <div class="iput_wrap">
+        <label>Имя и фамилия</label>
+        <input type="text" class="name" #name>
+      </div>
+      <div class="iput_wrap">
+        <label>Номер телефона</label>
+        <input type="text" class="phone" #phone>
+      </div>
+      <div class="iput_wrap">
+        <label>Адрес электронной почты</label>
+        <input type="text" class="email" placeholder="example@mail.com" #email>
+      </div>
+      <button type="submit" class="btn yellow submit">Получить условия франшизы</button>
+    </form>
+  </section>
+</div>

@@ -1,0 +1,555 @@
+[
+    {
+        "place": "Харьков",
+        "regions": [
+            {   
+                "id": "1",
+                "title": "область1",
+                "links": "Vinnitskaya",
+                "cities": [
+                    "city1",
+                    "city2",
+                    "city3",
+                    "city4",
+                    "city5",
+                    "city6",
+                    "city7"
+                ]
+            },
+            {
+                "id": "2",
+                "title": "область2",
+                "links": "Vinnitskaya",
+                "cities": [
+                    "city1",
+                    "city2",
+                    "city3",
+                    "city4",
+                    "city5",
+                    "city6",
+                    "city7"
+                ]
+            },
+            {
+                "id": "3",
+                "title": "область3",
+                "links": "Vinnitskaya",
+                "cities": [
+                    "city1",
+                    "city2",
+                    "city3",
+                    "city4",
+                    "city5",
+                    "city6",
+                    "city7"
+                ]
+            },
+            {
+                "id": "4",
+                "title": "область4",
+                "links": "Vinnitskaya",
+                "cities": [
+                    "city1",
+                    "city2",
+                    "city3",
+                    "city4",
+                    "city5",
+                    "city6",
+                    "city7"
+                ]
+            },
+            {
+                "id": "5",
+                "title": "область5",
+                "links": "Vinnitskaya",
+                "cities": [
+                    "city1",
+                    "city2",
+                    "city3",
+                    "city4",
+                    "city5",
+                    "city6",
+                    "city7"
+                ]
+            },
+            {
+                "id": "6",
+                "title": "область6",
+                "links": "Vinnitskaya",
+                "cities": [
+                    "city1",
+                    "city2",
+                    "city3",
+                    "city4",
+                    "city5",
+                    "city6",
+                    "city7"
+                ]
+            },
+            {
+                "id": "7",
+                "title": "область7",
+                "links": "Vinnitskaya",
+                "cities": [
+                    "city1",
+                    "city2",
+                    "city3",
+                    "city4",
+                    "city5",
+                    "city6",
+                    "city7"
+                ]
+            },
+            {
+                "id": "8",
+                "title": "область8",
+                "links": "Vinnitskaya",
+                "cities": [
+                    "city1",
+                    "city2",
+                    "city3",
+                    "city4",
+                    "city5",
+                    "city6",
+                    "city7"
+                ]
+            },
+            {
+                "id": "10",
+                "title": "область9",
+                "links": "Vinnitskaya",
+                "cities": [
+                    "city1",
+                    "city2",
+                    "city3",
+                    "city4",
+                    "city5",
+                    "city6",
+                    "city7"
+                ]
+            },
+            {
+                "title": "область10",
+                "links": "Vinnitskaya",
+                "cities": [
+                    "city1",
+                    "city2",
+                    "city3",
+                    "city4",
+                    "city5",
+                    "city6",
+                    "city7"
+                ]
+            },
+            {
+                "title": "область11",
+                "links": "Vinnitskaya",
+                "cities": [
+                    "city1",
+                    "city2",
+                    "city3",
+                    "city4",
+                    "city5",
+                    "city6",
+                    "city7"
+                ]
+            },
+            {
+                "title": "Винницкая область",
+                "links": "Vinnitskaya",
+                "cities": [
+                    "city1",
+                    "city2",
+                    "city3",
+                    "city4",
+                    "city5",
+                    "city6",
+                    "city7"
+                ]
+            },
+            {
+                "title": "Волынская область",
+                "links": "Vinnitskaya",
+                "cities": [
+                    "city1",
+                    "city2",
+                    "city3",
+                    "city4",
+                    "city5",
+                    "city6",
+                    "city7"
+                ]
+            },
+            {
+                "title": "Винницкая область",
+                "links": "Vinnitskaya",
+                "cities": [
+                    "city1",
+                    "city2",
+                    "city3",
+                    "city4",
+                    "city5",
+                    "city6",
+                    "city7"
+                ]
+            },
+            {
+                "title": "Винницкая область",
+                "links": "Vinnitskaya",
+                "cities": [
+                    "city1",
+                    "city2",
+                    "city3",
+                    "city4",
+                    "city5",
+                    "city6",
+                    "city7"
+                ]
+            },
+            {
+                "title": "Винницкая область",
+                "links": "Vinnitskaya",
+                "cities": [
+                    "city1",
+                    "city2",
+                    "city3",
+                    "city4",
+                    "city5",
+                    "city6",
+                    "city7"
+                ]
+            },
+            {
+                "title": "Винницкая область",
+                "links": "Vinnitskaya",
+                "cities": [
+                    "city1",
+                    "city2",
+                    "city3",
+                    "city4",
+                    "city5",
+                    "city6",
+                    "city7"
+                ]
+            },
+            {
+                "title": "Винницкая область",
+                "links": "Vinnitskaya",
+                "cities": [
+                    "city1",
+                    "city2",
+                    "city3",
+                    "city4",
+                    "city5",
+                    "city6",
+                    "city7"
+                ]
+            },
+            {
+                "title": "Винницкая область",
+                "links": "Vinnitskaya",
+                "cities": [
+                    "city1",
+                    "city2",
+                    "city3",
+                    "city4",
+                    "city5",
+                    "city6",
+                    "city7"
+                ]
+            },
+            {
+                "title": "Винницкая область",
+                "links": "Vinnitskaya",
+                "cities": [
+                    "city1",
+                    "city2",
+                    "city3",
+                    "city4",
+                    "city5",
+                    "city6",
+                    "city7"
+                ]
+            },
+            {
+                "title": "Винницкая область",
+                "links": "Vinnitskaya",
+                "cities": [
+                    "city1",
+                    "city2",
+                    "city3",
+                    "city4",
+                    "city5",
+                    "city6",
+                    "city7"
+                ]
+            },
+            {
+                "title": "Винницкая область",
+                "links": "Vinnitskaya",
+                "cities": [
+                    "city1",
+                    "city2",
+                    "city3",
+                    "city4",
+                    "city5",
+                    "city6",
+                    "city7"
+                ]
+            }
+        ],
+        "navigation": [
+            {
+                "image": "assets/imgs/food_icon.png",
+                "title": "Еда",
+                "background": "#4bc76b",
+                "nested": [
+                    {
+                        "text": "Кафе",
+                        "sector": "cafe"
+                    },
+                    {
+                        "text": "Рестораны",
+                        "sector": "restaraunt"
+                    },
+                    {
+                        "text": "Другое",
+                        "sector": "more"
+                    },
+                    {
+                        "text": "Совсем другое",
+                        "sector": "more"
+                    }
+                ]
+            },
+            {
+                "image": "assets/imgs/hotel_icon.png",
+                "title": "Отели",
+                "background": "#ffb14b",
+                "nested": [
+                    {
+                        "text": "Кафе",
+                        "sector": "cafe"
+                    },
+                    {
+                        "text": "Рестораны",
+                        "sector": "restaraunt"
+                    },
+                    {
+                        "text": "Другое",
+                        "sector": "more"
+                    }
+                ]
+            },
+            {
+                "image": "assets/imgs/pharm_icon.png",
+                "title": "Аптеки",
+                "background": "#9ecc14",
+                "nested": [
+                    {
+                        "text": "Кафе",
+                        "sector": "cafe"
+                    },
+                    {
+                        "text": "Рестораны",
+                        "sector": "restaraunt"
+                    },
+                    {
+                        "text": "Другое",
+                        "sector": "more"
+                    }
+                ]
+            },
+            {
+                "image": "assets/imgs/market_icon.png",
+                "title": "ТРЦ",
+                "background": "#39f",
+                "nested": [
+                    {
+                        "text": "Кафе",
+                        "sector": "cafe"
+                    },
+                    {
+                        "text": "Рестораны",
+                        "sector": "restaraunt"
+                    },
+                    {
+                        "text": "Другое",
+                        "sector": "more"
+                    }
+                ]
+            },
+            {
+                "image": "assets/imgs/product_icon.png",
+                "title": "Продукты",
+                "background": "#48c8f3",
+                "nested": [
+                    {
+                        "text": "Кафе",
+                        "sector": "cafe"
+                    },
+                    {
+                        "text": "Рестораны",
+                        "sector": "restaraunt"
+                    },
+                    {
+                        "text": "Другое",
+                        "sector": "more"
+                    }
+                ]
+            },
+            {
+                "image": "assets/imgs/fueling_icon.png",
+                "title": "АЗС",
+                "background": "#7daeb3",
+                "nested": [
+                    {
+                        "text": "Кафе",
+                        "sector": "cafe"
+                    },
+                    {
+                        "text": "Рестораны",
+                        "sector": "restaraunt"
+                    },
+                    {
+                        "text": "Другое",
+                        "sector": "more"
+                    }
+                ]
+            },
+            {
+                "image": "assets/imgs/clubs_icon.png",
+                "title": "Бары",
+                "background": "#ffb14b",
+                "nested": [
+                    {
+                        "text": "Кафе",
+                        "sector": "cafe"
+                    },
+                    {
+                        "text": "Рестораны",
+                        "sector": "restaraunt"
+                    },
+                    {
+                        "text": "Другое",
+                        "sector": "more"
+                    }
+                ]
+            },
+            {
+                "image": "assets/imgs/atm_icon.png",
+                "title": "Банкоматы",
+                "background": "#9ecc14",
+                "nested": [
+                    {
+                        "text": "Кафе",
+                        "sector": "cafe"
+                    },
+                    {
+                        "text": "Рестораны",
+                        "sector": "restaraunt"
+                    },
+                    {
+                        "text": "Другое",
+                        "sector": "more"
+                    }
+                ]
+            },
+            {
+                "image": "assets/imgs/market_icon.png",
+                "title": "ТРЦ",
+                "background": "#4bc76b",
+                "nested": [
+                    {
+                        "text": "Кафе",
+                        "sector": "cafe"
+                    },
+                    {
+                        "text": "Рестораны",
+                        "sector": "restaraunt"
+                    },
+                    {
+                        "text": "Другое",
+                        "sector": "more"
+                    }
+                ]
+            },
+            {
+                "image": "assets/imgs/product_icon.png",
+                "title": "Продукты",
+                "background": "#48c8f3",
+                "nested": [
+                    {
+                        "text": "Кафе",
+                        "sector": "cafe"
+                    },
+                    {
+                        "text": "Рестораны",
+                        "sector": "restaraunt"
+                    },
+                    {
+                        "text": "Другое",
+                        "sector": "more"
+                    }
+                ]
+            },
+            {
+                "image": "assets/imgs/fueling_icon.png",
+                "title": "АЗС",
+                "background": "#ff73a2",
+                "nested": [
+                    {
+                        "text": "Кафе",
+                        "sector": "cafe"
+                    },
+                    {
+                        "text": "Рестораны",
+                        "sector": "restaraunt"
+                    },
+                    {
+                        "text": "Другое",
+                        "sector": "more"
+                    }
+                ]
+            },
+            {
+                "image": "assets/imgs/clubs_icon.png",
+                "title": "Бары",
+                "background": "#48c8f3",
+                "nested": [
+                    {
+                        "text": "Кафе",
+                        "sector": "cafe"
+                    },
+                    {
+                        "text": "Рестораны",
+                        "sector": "restaraunt"
+                    },
+                    {
+                        "text": "Другое",
+                        "sector": "more"
+                    }
+                ]
+            },
+            {
+                "image": "assets/imgs/atm_icon.png",
+                "title": "Банкоматы",
+                "background": "#ffb14b",
+                "nested": [
+                    {
+                        "text": "Кафе",
+                        "sector": "cafe"
+                    },
+                    {
+                        "text": "Рестораны",
+                        "sector": "restaraunt"
+                    },
+                    {
+                        "text": "Другое",
+                        "sector": "more"
+                    }
+                ]
+            }
+        ]
+    }
+]

@@ -1,0 +1,66 @@
+@import '../../../assets/scss/vars';
+
+.expand {
+	.top_line {
+		margin-bottom: 37px;
+	}
+	.company {
+		margin-bottom: 47px;
+	}
+	.text_part {
+		padding-left: 30px;
+		.tags_row {
+			margin-bottom: 22px;
+		}
+		h3 {
+			margin-top: 0;
+			color: #010101;
+	    font-size: 21px;
+	    font-weight: 600;
+		}
+		p {
+			font-size: 16px;
+			font-weight: 400;
+			line-height: 24px;
+			margin-bottom: 20px;
+		}
+		.link {
+			display: inline-block;
+		}
+		.tags {
+			margin-right: 28px;
+		}
+	}
+	.img_wrap {
+		position: relative;
+    	height: 247px;
+		border: 2px solid $light_blue;
+		img {
+	    max-width: 60%;
+	    display: block;
+	    position: absolute;
+	    left: 50%;
+	    top: 50%;
+	    transform: translate(-50%, -50%);
+		}
+	}
+	.deal_btn {
+		color: #000;
+	}
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+	.expand {
+		.text_part {
+			margin-top: 10px;
+			padding-right: 0;
+			padding-left: 0;
+		}
+		.deal_btn {
+			width: 100%;
+		}
+	}
+	.maps_before {
+		padding-right: 50px;
+	}
+}

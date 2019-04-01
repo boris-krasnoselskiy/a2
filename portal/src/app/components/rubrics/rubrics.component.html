@@ -1,0 +1,30 @@
+<div class="container">
+  <section class="rubrics">
+    <div class="top_line">
+      <h2 class="maps_before">Все рубрики</h2>
+      <span (click)="goToback()" class="back_link blue_line" (click)="closeAllPanels()">
+          Вернуться
+      </span>
+    </div>
+    <div class="item_wrap">
+      <!-- <a [routerLink]="['../search', rubric.title]" class="title blue_line blue_dot"></a> -->
+      <mat-expansion-panel 
+        [expanded]="(selectedRubricks == i + 1) ? true : false" 
+        class="item" 
+        #myPanel
+        *ngFor="let rubric of (rubrics | async); let i = index;">
+          <mat-expansion-panel-header [expandedHeight]="expandedHeight" [collapsedHeight]="collapsedHeight">
+            <p>{{ rubric.name }}</p>
+          </mat-expansion-panel-header>
+        
+          <mat-action-row>
+            <ul class="scrollable">
+              <li *ngFor="let tag of rubric.nested"
+                [routerLink]="['../search', tag.text]">
+                {{ tag.text }}
+              </li>
+            </ul>
+          </mat-action-row>
+      </mat-expansion-panel>
+    </div>
+  </section>

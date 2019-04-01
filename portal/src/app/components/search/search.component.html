@@ -1,0 +1,50 @@
+<div class="container search">
+  <section class="companies">
+    <div class="top_line">
+      <div *ngIf="!temp">
+        <h2 class="maps_before">Результаты поиска по запросу «{{ searchReq }}»</h2>
+        <span (click)="goToback()" class="back_link blue_line" (click)="closeAllPanels()">
+          Вернуться
+        </span>
+      </div>
+      <div *ngIf="temp">
+        <h2 class="maps_before">По запросу «{{ searchReq }}» ничего не нашли ;(</h2>
+        <span (click)="goToback()" class="back_link blue_line" (click)="closeAllPanels()">
+          Вернуться
+        </span>
+      </div>
+    </div>
+    <div *ngIf="!temp">
+      <div class="items row" *ngFor="let result of searchResultData | async">
+        <div class="company col-md-4"
+             [routerLink]="['/companies/', company.id ]"
+             *ngFor="let company of result.companies">
+          <div class="like_it red right">
+            <img src="assets/imgs/flag_icon.png" alt="flag_icon">
+          </div>
+          <div class="img_wrap" [style.background]="'url('+company.company_logo+')'">
+            <div class="info_line">
+              <h3>{{ company.title }}</h3>
+            </div>
+          </div>
+          <div class="shadow">
+            <div class="hovered bott_line">
+                <div class="place_type food yellow">
+                  <img src="{{ company.type_image }}" alt="food_icon">
+                </div>
+                <ul class="tags">
+                  <li *ngFor="let tag of company.tags">
+                    <a [routerLink]="['/companies/', tag.sector ]" class="blue_line">{{ tag.text }}</a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+        </div>
+        <!-- <a href="javascript:void(0);"
+          *ngIf="isShowButton"
+          (click)="getMore();" 
+          class="btn blue full_width btn-border">Показать еще</a> -->
+      </div>
+    </div>
+  </section>
+</div>

@@ -1,0 +1,55 @@
+<div class="container">
+    <section class="about" *ngFor="let about of aboutData | async">
+        <div class="top_line">
+            <h2 class="maps_before">{{ about.title }}</h2>
+            <span (click)="goToback()" class="back_link blue_line" (click)="closeAllPanels()">
+                Вернуться
+            </span>
+        </div>
+        <div class="row">
+            <div class="col-md-8" [innerHTML]="about.content"></div>
+            <aside class="col-md-4">
+                <div class="contacts blue" *ngFor="let info of about.company_info">
+                    <h4>
+                      <img src="assets/imgs/office_icon.png" alt="office_icon">
+                      {{ info.title }}
+                  </h4>
+                    <ul >
+                        <li>{{ info.company }}</li>
+                        <li>{{ info.adress }}</li>
+                        <li>{{ info.city_country }}</li>
+                        <li>{{ info.phone }}</li>
+                        <li>{{ info.email }}</li>
+                    </ul>
+                </div>
+                <a [routerLink]="['../add-company']" class="btn yellow add_company">Добавить свою компанию</a>
+                <div class="share">
+                    <span>Поделиться:</span>
+                          <ul class="social">
+                              <li>
+                                  <a href="/" class="facebook">
+                                      <i class="fa fa-facebook" aria-hidden="true"></i>
+                                  </a>
+                              </li>
+                              <li>
+                                  <a href="/" class="linked">
+                                      <i class="fa fa-linkedin" aria-hidden="true"></i>
+                                  </a>
+                              </li>
+                              <li>
+                                  <a href="/" class="inst">
+                                      <i class="fa fa-instagram" aria-hidden="true"></i>
+                                  </a>
+                              </li>
+                              <li>
+                                  <a href="/" class="tweet">
+                                      <i class="fa fa-twitter" aria-hidden="true"></i>
+                                  </a>
+                              </li>
+                          </ul>
+                </div>
+            </aside>
+        </div>
+      </section>
+      <!-- end of about -->
+</div>

@@ -1,0 +1,258 @@
+<div class="container">
+  <section class="presentaion" *ngFor="let company of companyData | async">
+    <div class="top_line">
+      <h2 class="maps_before">{{ company.title }}</h2>
+      <span (click)="goToback()" class="back_link blue_line" (click)="closeAllPanels()">
+          Вернуться
+      </span>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <ngx-carousel
+          class="top_slider"
+          [inputs]="carouselOne">
+            <ngx-item NgxCarouselItem class="slider_item" *ngFor="let image of company.slider_images">
+              <div [style.background]="'url('+image+')'" class="stretched bg_holder">
+              </div>
+            </ngx-item>
+            <button NgxCarouselPrev class='left_arr'>
+              <i class="fa fa-chevron-left" aria-hidden="true"></i>
+            </button>
+            <button NgxCarouselNext class='right_arr'>
+                <i class="fa fa-chevron-right" aria-hidden="true"></i>
+            </button>
+        </ngx-carousel>
+        <!-- <div class="bott_line">
+          <div class="tags_wrap">
+            <div class="place_type" [style.background]="company.type_bg">
+              <img [src]="company.type_image" [alt]="company.title">
+            </div>
+            <ul class="tags">
+              <li *ngFor="let tag of company.tags">
+                <a 
+                  [routerLink]="['../../search/',tag.text]"  
+                  class="blue_line">{{ tag.text }}
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="link link_wrap right">
+            <a href="javascript:void(0);" class="blue_line">Добавить в избранное</a>
+            <div class="like_it red">
+              <img src="assets/imgs/flag_icon.png" alt="flag_icon">
+            </div>
+          </div>
+        </div> -->
+      </div>
+      <div class="col-md-8">
+        <div 
+          [innerHTML]="company.content"
+          [style.height]="toggleCollapse()"
+          [ngClass]="isCollapsedContent ? 'bott_gradient' : ''"
+          #descr>
+        </div>
+        <span class="see_all" (click)="isCollapsedContent = !isCollapsedContent">
+          {{ isCollapsedContent == true ? 'Смотреть полностью' : 'Скрыть' }}
+        </span>
+
+        <div class="btn_row">
+          <a [href]="file.file_path"
+             *ngFor="let file of company.files"
+             target="_blank" class="btn yellow_border menu_btn">
+            {{ file.file_name }}
+          </a>
+        </div>
+        
+        <div class="row list_row">
+          <div class="col-md-12 list_wrap" *ngFor="let time of company.working_time">
+            <h4 class="list_title">Время работы</h4>
+            
+            <ul class="list time_list">
+              <li>
+                  <span class="circle">Пн</span>
+                  <div *ngIf="time.Monday.from !== 'offtime'">
+                    c {{ time.Monday.from }} до {{ time.Monday.till }}
+                  </div>
+                  <div *ngIf="time.Monday.from == 'offtime'">
+                    Выходной
+                  </div>
+              </li>
+              <li>
+                  <span class="circle">Вт</span>
+                  <div *ngIf="time.Tuesday.from !== 'offtime'">
+                    c {{ time.Tuesday.from }} до {{ time.Tuesday.till }}
+                  </div>
+                  <div *ngIf="time.Tuesday.from == 'offtime'">
+                    Выходной
+                  </div>
+              </li>
+              <li>
+                  <span class="circle">Ср</span>
+                  <div *ngIf="time.Wednesday.from !== 'offtime'">
+                    c {{ time.Wednesday.from }} до {{ time.Wednesday.till }}
+                  </div>
+                  <div *ngIf="time.Wednesday.from == 'offtime'">
+                    Выходной
+                  </div>
+              </li>
+              <li>
+                  <span class="circle">Чт</span>
+                  <div *ngIf="time.Thursday.from !== 'offtime'">
+                    c {{ time.Thursday.from }} до {{ time.Thursday.till }}
+                  </div>
+                  <div *ngIf="time.Thursday.from == 'offtime'">
+                    Выходной
+                  </div>
+              </li>
+              <li>
+                  <span class="circle">Пт</span>
+                  <div *ngIf="time.Friday.from !== 'offtime'">
+                    c {{ time.Friday.from }} до {{ time.Friday.till }}
+                  </div>
+                  <div *ngIf="time.Friday.from == 'offtime'">
+                    Выходной
+                  </div>
+              </li>
+              <li>
+                <span class="circle">Сб</span>
+                <div *ngIf="time.Saturday.from !== 'offtime'">
+                  c {{ time.Saturday.from }} до {{ time.Saturday.till }}
+                </div>
+                <div *ngIf="time.Saturday.from == 'offtime'">
+                  Выходной
+                </div>
+              </li>
+              <li>
+                <span class="circle">Вс</span>
+                <div *ngIf="time.Sunday.from !== 'offtime'">
+                  c {{ time.Sunday.from }} до {{ time.Sunday.till }}
+                </div>
+                <div *ngIf="time.Sunday.from == 'offtime'">
+                  Выходной
+                </div>
+              </li>
+            </ul>
+          </div> 
+          <div class="col-xs-6 col-md-6 list_wrap" *ngFor="let group of company.groups">
+            <h4 class="list_title">{{ group.name }}</h4>
+            <ul class="list">
+              <li *ngFor="let tag of group.tags">
+                <a class="blue_line" 
+                [routerLink]="['../../search/', tag.text ]">{{ tag.text }}</a>
+              </li>
+            </ul>
+          </div> 
+        </div>
+      </div>
+  
+      <aside class="col-md-4">
+          <mat-accordion  
+            class="contacts" 
+            *ngFor="let info of company.company_info">
+            <mat-expansion-panel (opened)="panelOpenState = true"
+                                 (closed)="panelOpenState = false">
+              <mat-expansion-panel-header>
+                <mat-panel-title (click)="isCompanyOficeShowed = !isCompanyOficeShowed">
+                  <h4>
+                    <img src="assets/imgs/food_icon.png" alt="office_icon">
+                    {{ info.title }}
+                  </h4>
+                </mat-panel-title>
+              </mat-expansion-panel-header>
+              
+              <div *ngIf="isCompanyOficeShowed">
+                <ul class="info" *ngFor="let info of company.company_info">
+                  <li>{{ info.title }}</li>
+                  <li>{{ info.company }}</li>
+                  <li>{{ info.address }}</li>
+                  <li>{{ info.city_country }}</li>
+                  <li>{{ info.phone }}</li>
+                  <li>{{ info.email }}</li>
+                </ul>
+              </div>
+              
+            </mat-expansion-panel>
+          </mat-accordion>
+        <div class="map_info green" *ngFor="let contact of company.company_closest">
+          <div class="top_line">
+            <h4>
+              <img src="assets/imgs/info_icon.png" alt="info_icon">
+              {{ contact.title1 }}
+            </h4>
+          </div>
+          <!-- top_line -->
+          <div class="body">
+            <div>
+              <ul>
+                <li *ngIf="isCompanyInfoShowed"><span>{{ contact.city_country }}</span></li>
+                <li *ngIf="isCompanyInfoShowed"><span>{{ contact.address }}</span></li>
+                <li>
+                  <span class="see_all" (click)="isCompanyInfoShowed = !isCompanyInfoShowed">
+                    {{ isCompanyInfoShowed == true ? 'Скрыть' : 'Смотреть адрес точки' }}
+                  </span>
+                </li>
+                <!-- <li><span>{{ contact.title2 }}</span></li> -->
+                <li>
+                  <a 
+                    class="link"
+                    [routerLink]="['../../map_page/company/',company.id]">
+                    {{ contact.text }}
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div *ngFor="let info of company.company_info">
+          <a [routerLink]="['../../become', company.id]"
+              class="btn yellow add_company">
+            Стать партнером
+          </a>
+        </div>
+        <div class="share">
+          <span>Поделиться:</span>
+          <ul class="social">
+            <li>
+              <a (click)="shareInNetworks('facebook')" class="facebook">
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+              </a>
+            </li>
+            <!-- <li>
+              <a href="/" class="linked">
+                <i class="fa fa-linkedin" aria-hidden="true"></i>
+              </a>
+            </li>
+            <li>
+              <a href="/" class="inst">
+                <i class="fa fa-instagram" aria-hidden="true"></i>
+              </a>
+            </li> -->
+            <li (click)="shareInNetworks('twitter')">
+              <a href="/" class="tweet">
+                <i class="fa fa-twitter" aria-hidden="true"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="inst" *ngFor="let company of companyData | async">
+      <h3>Инстаграм компании {{ company.title }}</h3>
+        <ngx-carousel
+          class="top_slider"
+          [inputs]="carouselTwo">
+            <ngx-item NgxCarouselItem class="slider_item" *ngFor="let image of company.insta_images">
+              <div [style.background]="'url('+image+')'" class="stretched bg_holder">
+              </div>
+            </ngx-item>
+            <button NgxCarouselPrev class='left_arr'>
+              <i class="fa fa-chevron-left" aria-hidden="true"></i>
+            </button>
+            <button NgxCarouselNext class='right_arr'>
+                <i class="fa fa-chevron-right" aria-hidden="true"></i>
+            </button>
+        </ngx-carousel>
+    </section>
+</div>

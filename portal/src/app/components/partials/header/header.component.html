@@ -1,0 +1,464 @@
+<header class="mobile_header" *ngFor="let header of headerData | async">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-5 menu_wrap">
+        <img src="assets/imgs/blue_humb.png" alt="blue_humb">
+        <span class="blue_line">Меню</span>
+        <a href="javascript:void(0);" class="stretched" (click)="toggleMenu()"></a>
+      </div>
+      <div class="col-xs-2 logo">
+        <img src="assets/imgs/logo.png" alt="logo">
+        <a href="javascript:void(0);" routerLink="home" class="stretched"></a>
+      </div>
+      <div class="col-xs-5 sectors_wrap">
+        <span class="blue_line">Разделы</span>
+        <img src="assets/imgs/sectors_icon.png" alt="sectors_icon">
+        <a href="javascript:void(0);" class="stretched" (click)="toggleRubrics()"></a>
+      </div>
+      <div class="col-xs-12 search_line">
+        <form class="search_form">
+          <div class="input_wrap">
+            <input type="text" 
+              placeholder="Найти компанию" 
+              class="search_area"
+              (keyup)="fastSearch(search_input.value, opened_checkbox, beside_checkbox)"
+              #search_input
+              placeholder="Поиск" [value]="inputValue"
+              name="search">
+            <input type="submit" class="submit">
+            <!-- <button type="submit" class="submit_btn">
+              <i class="fa fa-search" aria-hidden="true"></i>
+            </button> -->
+          </div>
+          <div class="label_wrap">
+            <label>
+              <input type="checkbox">
+              Сейчас открыто
+            </label>
+          </div>
+
+          <div class="label_wrap">
+            <label>
+              <input type="checkbox">
+              Рядом со мной
+            </label>
+          </div>
+        </form>
+
+        <!-- <div class="filter_wrap right">
+          <span class="blue_line">Фильтр</span>
+          <img src="assets/imgs/filter_icon.png" alt="filter_icon">
+        </div> -->
+      </div>
+    </div>
+  </div>
+</header>
+
+<header class="desktop_header" *ngFor="let header of headerData | async">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-5 col-md-5 poi">
+        <div class="top_line place">
+          <div class="wrap">
+            <img src="assets/imgs/pin.png" class="pin" alt="pin">
+            <div class="city_wrap">
+              <span>Ваш город: </span>
+              <span class="city blue_line" (click)="toggleRegionsWindow()">
+                <div *ngIf="!hasNewPlace">
+                    {{ header.place }}
+                </div>
+                <div class="11" *ngIf="hasNewPlace">
+                    {{ newPlace }}
+                </div>
+              </span>
+              <img src="assets/imgs/arrow.png" alt="arrow">
+              
+              <div class="nested_wrap" *ngIf="regionsWindowIsOpen">
+                <span class="all_country blue_line">Вся Украина</span>
+                <span class="close" (click)="toggleRegionsWindow()"></span>
+                <div class="row">
+                  <ul class="nested_cities">
+                    <li class="col-sm-4 col-md-3" *ngFor="let region of header.regions">
+                      <a href="javascript:void(0);" 
+                          [attr.id]='region.id'
+                          (click)="chooseRegion(region.id)"
+                          >
+                        <span class="blue_line">{{ region.title }}</span>
+                        <!-- <span *ngFor="let city of region.cities">{{city}}</span> -->
+                      </a>
+                      <!-- [routerLink]="['/regions/', region.links ]" -->
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="city_popup" *ngIf="regionIsSelected">
+                  <span class="back_link blue_line" (click)="backToRegionsPopup()">
+                      Вернуться
+                  </span>
+                  <div class="scrollable">
+                    <div *ngFor="let region of header.regions">
+                      <div *ngIf="selected_region == region.id" [attr.id]='region.id'>
+                        <ul>
+                          <li *ngFor="let city of region.cities" (click)="chooseCity(city)">
+                            <span class="blue_line">{{ city }}</span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div> 
+              </div>
+              
+              <div class="city_popup place_popup" *ngIf="showCityPopup">
+                <span class="close" (click)="closeCityPopup()"></span>
+                Ваш город {{ header.place }} ?
+                <button class="btn yellow" (click)="setCity(header.place)">Да</button>
+                <button class="btn yellow" (click)="enterPlace()">Нет</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bott_line">
+          <div class="wrap news_line">
+            <img src="assets/imgs/news_icon.png" class="news_icon" alt="pin">
+            <a [routerLink]="['/news/']" class="green_line mobile">Новости</a>
+            <a [routerLink]="['/news/']" class="green_line desk">Новости компаний</a>
+          </div>
+          <div class="wrap">
+            <img src="assets/imgs/map_icon.png" class="maps_icon" alt="pin">
+            <a [routerLink]="['/map_page/']" class="blue_line mobile">Компании</a>
+            <a [routerLink]="['/map_page/']" class="blue_line desk">Компании на карте города</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-2 col-md-2 logo">
+        <img src="assets/imgs/logo.png" alt="logo">
+        <a href="javascript:void(0);" routerLink="home" class="stretched"></a>
+      </div>
+
+      <div class="col-sm-5 col-md-5">
+        <app-widgets></app-widgets>
+
+        <div class="top_line clearfix">
+          <ul class="social right">
+            <li>
+              <a href="/" class="facebook">
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+              </a>
+            </li>
+            <li>
+              <a href="/" class="linked">
+                <i class="fa fa-linkedin" aria-hidden="true"></i>
+              </a>
+            </li>
+            <li>
+              <a href="/" class="inst">
+                <i class="fa fa-instagram" aria-hidden="true"></i>
+              </a>
+            </li>
+            <li>
+              <a href="/" class="tweet">
+                <i class="fa fa-twitter" aria-hidden="true"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="bott_line clearfix">
+          <div class="wrap news_line right mr0">
+            <img src="assets/imgs/enter_icon.png" class="enter_icon" alt="pin">
+            <a [routerLink]="['/registration']" class="blue_line">Вход и регистрация</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-12 nav_panel">
+      <ul>
+        <li [style.background]="navigation.background"
+            [ngClass]="[(i < 7) ? 'tablet_visible' : '' || (i < 12) ? 'desktop_visible' : '' || last ? 'tablet_visible last_item' : '']"
+            *ngFor="let navigation of header.navigation; let last = last; let i = index;">
+            <div *ngIf="last">
+                <img src="assets/imgs/burger_icon.png" alt="burger_icon">
+                <span>Все рубрики</span>
+                <a 
+                  (click)="toggleRubricsPopup()"
+                  class="stretched routerlink"></a>
+            </div>
+          <div *ngIf="!last" class="hover_block">
+            <div class="img_wrap" >
+                <img src="{{ navigation.image }}" alt="">
+              </div>
+              <span>{{ navigation.title }}</span>
+              <a (click)="chooseRubric(navigation.id, true)" class="stretched"></a>
+          </div>
+          <!-- <a [routerLink]="['../all-rubrics/', navigation.id]" class="stretched"></a> -->
+          <ul class="nested">
+            <li
+              *ngFor="let nested of navigation.nested"
+              (click)="rubricsClick(nested.text, nested.id)">
+              <span [style.background]="navigation.background" class="point"></span>
+              <a class="blue_line">{{ nested.text }}</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+      <div class="rubrics_wrap"
+          [class.nested_wrap]="allRubricsOpen"
+          (mouseleave)="closeRubricsPopup()"
+          *ngIf="rubricIsOpen">
+        <!-- <span (click)="goBackToRubrics()" class="back_link blue_line" *ngIf="!showRubricCloseBtn">
+            Вернуться
+        </span> -->
+        <!-- <span class="close" (click)="closeRubricsPopup()" *ngIf="showRubricCloseBtn"></span> -->
+        <div class="row" *ngFor="let rubric of rubricsData | async">
+          <ul class="rubrics">
+            <li class="col-md-3" 
+                *ngFor="let rubric_item of rubric.rubrics" 
+                (click)="chooseRubric(rubric_item.id, rubric_item.title); mapPageFilter(rubric_item.title);">
+              <a href="javascript:void(0);">
+                <span class="blue_line">{{ rubric_item.title }}</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="rubrics_content rubrics_wrap" 
+            *ngIf="rubricContentIsOpen" 
+            (mouseleave)="closeRubricsPopup()">
+        <span (click)="goBackToRubrics()" class="back_link blue_line" *ngIf="!showRubricCloseBtn">
+            Вернуться
+        </span>
+        <!-- <span class="close" (click)="closeRubricsPopup()" *ngIf="showRubricCloseBtn"></span> -->
+        <div class="scrollable">
+          <ul class="rubrics">
+              <li class="col-md-3"
+                (click)="closeRubricsPopup(rubric.name); mapPageFilter(rubric.name);"
+                *ngFor="let rubric of rubricData | async">
+                <span class="list_span" [style.background]="rubric.background"></span>
+                <span>
+                  {{ rubric.name }}
+                </span>
+              </li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+    <div class="col-md-12 search_line">
+      <form 
+        (submit)="fastSearch(search_input.value, opened_checkbox, beside_checkbox)"
+          class="search_form"
+          #f="ngForm">
+        <div class="input_wrap">
+            <!-- (keyup)="fastSearch(search_input.value, opened_checkbox, beside_checkbox)"           -->
+          <input type="text" 
+                  placeholder="Найти компанию" 
+                  class="search_area"
+                  #search_input
+                  [(ngModel)]="search_text"
+                  placeholder="Поиск" [value]="inputValue"
+                  name="search">
+          <!-- <input type="submit" class="submit"> -->
+          <button type="submit" class="submit_btn">
+            <i class="fa fa-search" aria-hidden="true"></i>
+          </button>
+        </div>
+        <div class="label_wrap">
+          <label>
+            <!-- (click)="checkboxSearch(openedCheckbox.id, !openedCheckbox.checked)"             -->
+            <mat-checkbox
+              id="opened"
+              #openedCheckbox
+              class="example-margin" 
+              [(ngModel)]="opened_checkbox"
+              (change)="openedCheckboxSearch(openedCheckbox.checked, search_input.value)"            
+              [ngModelOptions]="{standalone: true}">Сейчас открыто</mat-checkbox>
+          </label>
+        </div>
+
+        <div class="label_wrap">
+          <label>
+              <!-- -->
+            <mat-checkbox
+              id="beside"
+              #besideCheckbox
+              class="example-margin" 
+              [(ngModel)]="beside_checkbox"
+              (change)="besideCheckboxSearch(besideCheckbox.checked, search_input.value)"
+              [ngModelOptions]="{standalone: true}">Рядом со мной</mat-checkbox>
+          </label>
+        </div>
+      </form>
+    </div>
+  </div>
+</header>
+
+<div class="mobile_menu" [@menuSlideInOut]="menuState" *ngFor="let header of headerData | async">
+  <div class="close_wrap" (click)="toggleMenu()">
+    <div class="close"></div>
+  </div>
+
+  <div class="menu_content">
+    <div class="wrap">
+      <div class="city_wrap">
+        <span>Ваш город: </span>
+        <span class="city blue_line" (click)="toggleRegionsWindow()">
+          <div *ngIf="!hasNewPlace" class="place_name">
+              {{ header.place }}
+          </div>
+          <div *ngIf="hasNewPlace" class="place_name">
+              {{ newPlace }}
+          </div>
+        </span>
+        <div class="nested_wrap" *ngIf="regionsWindowIsOpen">
+          <span class="all_country blue_line">Вся Украина</span>
+          <span class="close" (click)="toggleRegionsWindow()"></span>
+          <div class="row">
+            <ul class="nested_cities">
+              <li class="col-md-3" *ngFor="let region of header.regions">
+                <a href="javascript:void(0);" 
+                    [attr.id]='region.id'
+                    (click)="chooseRegion(region.id)">
+                  <span class="blue_line">{{ region.title }}</span>
+                  <!-- <span *ngFor="let city of region.cities">{{city}}</span> -->
+                </a>
+                <!-- [routerLink]="['/regions/', region.links ]" -->
+              </li>
+            </ul>
+          </div>
+        </div>
+  
+        <div class="city_popup" *ngIf="regionIsSelected">
+          <span class="close" (click)="closeCityPopup()"></span>
+          
+          <div *ngFor="let region of header.regions">
+              <div *ngIf="selected_region == region.id" [attr.id]='region.id'>
+                <ul>
+                  <li *ngFor="let city of region.cities" (click)="chooseCity(city)">
+                    <span>{{ city  | slice: 0:14 }}</span>
+                  </li>
+                </ul>
+              </div>
+          </div>
+        </div>
+        
+        <div class="city_popup place_popup" *ngIf="showCityPopup">
+          <span class="close" (click)="closeCityPopup()"></span>
+          <p>
+            Ваш город  {{ header.place }} ?
+          </p>
+          <button class="btn yellow" (click)="setCity(header.place)">Да</button>
+          <button class="btn yellow" (click)="enterPlace()">Нет</button>
+        </div>
+      </div>
+
+    </div>
+  
+    <ul class="mobile_nav">
+      <li>
+        <a [routerLink]="['/news/']" class="desk">Новости компаний</a>
+      </li>
+      <li>
+        <a [routerLink]="['/map_page/']" class="desk">Компании на карте города</a>
+      </li>
+      <li>
+        <a class="desk">Заказать обратный звонок</a>
+      </li>
+      <li>
+         <a class="desk">Написать сообщение</a>
+      </li>
+      <li><a [routerLink]="['/registration']">Вход и регистрация</a></li>
+    </ul>
+  
+    <ul class="social">
+      <li>
+        <a href="/" class="facebook">
+          <i class="fa fa-facebook" aria-hidden="true"></i>
+        </a>
+      </li>
+      <li>
+        <a href="/" class="linked">
+          <i class="fa fa-linkedin" aria-hidden="true"></i>
+        </a>
+      </li>
+      <li>
+        <a href="/" class="inst">
+          <i class="fa fa-instagram" aria-hidden="true"></i>
+        </a>
+      </li>
+      <li>
+        <a href="/" class="tweet">
+          <i class="fa fa-twitter" aria-hidden="true"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+</div>
+
+<div class="mobile_wrap">
+  <div class="nav_panel_mobile col-xs-12 mobile_rubrics" *ngIf="rubricState && !rubricIsActive">
+    <ul>
+      <li [ngClass]="[(i < 12) ? 'visible' : '' || last ? 'last_item' : '']"
+          *ngFor="let navigation of navigation; let last = last; let i = index;">
+          <div *ngIf="last">
+              <img src="assets/imgs/burger_icon.png" alt="burger_icon">
+              <span>Все рубрики</span>
+              <a 
+                (click)="getAllRubrics()" 
+                class="stretched routerlink"></a>
+          </div>
+        <div *ngIf="!last" class="hover_block">
+          <div class="img_wrap" >
+              <img src="{{ navigation.image }}" alt="">
+            </div>
+            <span>{{ navigation.title }}</span>
+            <a class="stretched" (click)="mobileRubricChoose(navigation.id)"></a>
+        </div>
+        <!-- [routerLink]="['../all-rubrics/', navigation.id]" -->
+      </li>
+    </ul>
+  </div>
+  
+  <div *ngIf="rubricIsActive" class="mobile_rubric_content scrollable">
+    <span (click)="mobileRubricBack()" class="back_link blue_line">
+        <!-- Вернуться -->
+    </span>
+
+    <ul class="nested" *ngIf="!isAllrubricsMobile">
+      <li
+        *ngFor="let nested of rubricData | async"
+        [routerLink]="['../search', nested.name]"
+        (click)="hidePopupOnRouting(); mobileRubricClick(nested.id);">
+        <a class="blue_line">{{ nested.name }}</a>
+      </li>
+    </ul>
+
+    <div *ngIf="isAllrubricsMobile">
+      <ul class="nested wzz" *ngFor="let nested of allRubrics | async">
+        <li
+          *ngFor="let rubric of nested.rubrics"
+          (click)="mobileRubricToggle(rubric.id); mobileRubricClick(rubric.id);">
+          <a class="blue_line">{{ rubric.name }}</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div *ngIf="nestedRubricIsActive" class="mobile_rubric_content scrollable">
+    <span (click)="hidePopupOnRouting()" class="back_link blue_line">
+        <!-- Вернуться -->
+    </span>
+
+    <ul class="nested">
+        <li
+          *ngFor="let rubric of rubricsData | async"
+          (click)="mobileRubricToggle(rubric.id); hidePopupOnRouting(); mobileRubricClick(rubric.id);"
+          [routerLink]="['../search/', rubric.name]">
+          <a class="blue_line">{{ rubric.name }}</a>
+        </li>
+      </ul>
+  </div>
+</div>

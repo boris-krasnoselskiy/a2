@@ -1,0 +1,79 @@
+<div class="container">
+  <section class="presentaion news" 
+           *ngFor="let news of newsData | async">
+    <div class="top_line">
+      <h2 class="maps_before">{{ news.title }}</h2>
+      <span (click)="goToback()" class="back_link blue_line" (click)="closeAllPanels()">
+          Вернуться
+      </span>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="img_wrap" [style.background]="'url('+news.image+')'">
+        <div class="bott_line">
+          <div class="date_wrap">
+            <div class="icon_wrap" [style.background]="news.type_bg">
+            <img src="assets/imgs/calendar_icon.png" alt="calendar_icon">
+            </div>
+          <span class="date">{{ news.date }}</span>
+          </div>
+        </div>
+        </div>
+      </div>
+      <div class="col-md-8" [innerHTML]="news.content"></div>
+  
+      <aside class="col-md-4">
+        <div class="contacts blue">
+          <div class="heading" *ngFor="let info of news.company_info">
+            <h4>
+              <img src="assets/imgs/bag_icon.png" alt="office_icon">
+              {{ info.title }}
+              <a class="streched" [routerLink]="['/companies/', info.company_id]"></a>
+            </h4>
+          </div>
+        </div>
+        <div class="map_info green" *ngFor="let on_map of news.news_on_map">
+          <div class="top_line">
+            <h4>
+              <img src="assets/imgs/pin_white.png" alt="pin_white">
+              {{ on_map.title }}
+          </h4>
+          <ul class="closest">
+            <li>{{ on_map.address }}</li>
+            <li>{{ on_map.city_country }}</li>
+          </ul>
+          </div>
+          <!-- top_line -->
+        </div>
+        <div class="share">
+          <span>Поделиться:</span>
+          <ul class="social">
+              <li>
+                <a (click)="shareInNetworks('facebook')" class="facebook">
+                  <i class="fa fa-facebook" aria-hidden="true"></i>
+                </a>
+              </li>
+              <!-- <li>
+                <a href="/" class="linked">
+                  <i class="fa fa-linkedin" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li>
+                <a href="/" class="inst">
+                  <i class="fa fa-instagram" aria-hidden="true"></i>
+                </a>
+              </li> -->
+              <li (click)="shareInNetworks('twitter')">
+                <a href="/" class="tweet">
+                  <i class="fa fa-twitter" aria-hidden="true"></i>
+                </a>
+              </li>
+            </ul>
+        </div>
+      </aside>
+    </div>
+  </section>
+</div>
+
+
+

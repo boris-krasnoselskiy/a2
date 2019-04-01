@@ -1,0 +1,175 @@
+<div class="container map_container" 
+     *ngFor="let map of getMapData | async">
+     {{ tempdata }}
+     <div class="row">
+      <!-- [@slideInOut]="menuState" -->
+    <div class="col-sm-6 col-md-4 column chain first_column">
+      <span class="close" (click)="closeAllPanels()"></span>
+      <div class="scrollable">
+        <div class="mobile">
+          <div class="heading">
+            <!-- <div class="search_word">Еда</div> -->
+            <a href="javascript:void(0);" class="back_link blue_line" (click)="closeAllPanels()">
+              Вернуться
+            </a>
+          </div>
+   
+          <ul *ngIf="!temp">
+            <li
+            [class.active]="selectedIndex === i" 
+            *ngFor="let company of companysData | async; let i = index" 
+            [id]="company.id">
+              <!-- <img class="company_logo" [src]="company.company_logo"> -->
+              <span class="blue_line">{{ company.title }}</span>
+              <!-- <ul class="tags">
+                <li 
+                  *ngFor="let tag of company.tags" 
+                  [routerLink]="['/search/', tag.sector]">
+                  {{ tag.text }}
+                </li>
+              </ul> -->
+              <!-- <img src="assets/imgs/arrow.png" class="arrow" alt="arrow"> -->
+              <a href="javascript:void(0);"
+                (click)="callPointPanel(company.id, i)" 
+                class="stretched"></a>
+            </li>
+          </ul>
+        </div>
+        <div *ngIf="error_msg" class="err_msg">
+          {{ error_msg }}
+        </div>
+        <ul class="column_list" *ngIf="!error_msg">
+          <li
+          [class.active]="selectedIndex === i" 
+          *ngFor="let company of companysData | async; let i = index" 
+          [id]="company.id">
+            <img class="company_logo" [src]="company.company_logo">
+            <span class="blue_line">{{ company.title }}</span>
+            <ul class="tags">
+              <li 
+                *ngFor="let tag of company.tags" 
+                [routerLink]="['/search/', tag.sector]">
+                {{ tag.text }}
+              </li>
+            </ul>
+            <img src="assets/imgs/arrow.png" class="arrow" alt="arrow">
+            <a href="javascript:void(0);"
+              (click)="callPointPanel(company.id, i); setPointStore(company.id, i)" 
+              class="stretched"></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-sm-6 col-md-4 column addresses second_column">
+      <span class="close" (click)="closePinPanel()"></span>
+      <a (click)="closePinPanel()" class="back_link blue_line mobile_link">
+          Вернуться
+      </a>
+      <form class="search_form"
+            *ngIf="isFilteredPoints"
+            (keyup)="pointsSearch(search.value, selectedCompanyId)">
+            <div class="input_wrap">
+              <input type="text"
+                      placeholder="Найти по адресу" 
+                      class="search_area" 
+                      #search>
+              <input type="submit" class="submit">
+            </div>
+        </form>
+      <div class="scrollable" *ngFor="let pointWrap of pointData | async">
+       <div *ngIf="!isFilteredPoints" class="pl20">
+          По запросу ничего не нашлось
+       </div>
+       <ul *ngIf="isFilteredPoints">
+         <li *ngFor="let point of pointWrap.points">
+           <span class="blue_line">{{ point.title }}</span>
+           <p>
+            <i class="fa fa-clock-o time_icon" aria-hidden="true"></i>
+            <span>{{ point.work_time }}</span>
+           </p>
+           <img src="assets/imgs/pin.png" class="pin" alt="pin">
+           <a [routerLink]="['/points/', point.id ]" class="stretched"></a>
+         </li>
+       </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- <agm-map 
+  class="map_page"
+  *ngFor="let map of getMapData | async"
+  [disableDefaultUI]="true"
+  [style.width.px]="mapWidth"
+  [latitude]="!isFilteredPoints ? coordX : updatedMapLatit"
+  [longitude]="!isFilteredPoints ? coordY : updatedMapLang"
+  [zoom]="14"
+  #myMap>
+
+    <div *ngIf="isFilteredPoints && !isOnlyOnePoints">
+      <div *ngFor="let pointWrap of pointData | async">
+          <div class="marker">
+              <agm-marker
+                *ngFor="let point of pointWrap.points"
+                [iconUrl]="setIconColor(point.pin_color)"
+                [latitude]="convertString(point.latitude)"
+                [longitude]="convertString(point.longitude)">
+              
+                <agm-info-window class="info_w">
+                  <h4 class="blue_line">{{ point.title }}</h4>
+                  <div [innerHTML]="point.content" class="marker_content"></div>
+                  <p>{{ point.points_num }} филиала</p>
+                  <div class="place_type" [style.background]="point.pin_color">
+                    <img [src]="point.type_img" alt="point.title">
+                  </div>
+                  <a href="javascript:void(0);" class='stretched' [routerLink]="['/points/', point.id]"></a>
+                </agm-info-window>
+              </agm-marker>
+            </div>
+      </div>
+    </div>
+
+    <div *ngIf="isOnlyOnePoints">
+      <agm-marker
+        [style.fill]='onePointColor'
+        [iconUrl]="setIconColor(onePointColor)"
+        [latitude]="onePointLat"
+        [longitude]="onePointLong">
+      
+        <agm-info-window class="info_w">
+          <h4 class="blue_line">{{ onePointTitle }}</h4>
+          <div [innerHTML]="onePointPopupContent" class="marker_content"></div>
+          <div class="place_type" [style.background]="onePointColor">
+            <img [src]="onePointTypeImg" alt="point.title">
+          </div>
+          <a href="javascript:void(0);" class='stretched' [routerLink]="['/points/', onePointId]"></a>
+        </agm-info-window>
+    
+      </agm-marker>
+    </div>
+    
+    <div *ngIf="!isFilteredPoints && ifPointsIsExsists && !isOnlyOnePoints">
+      <div class="marker" *ngFor="let network of map.networks">
+        <agm-marker
+          [style.fill]='point.pin_color'
+          *ngFor="let point of network.points"
+          [iconUrl]="setIconColor(point.pin_color)"
+          [latitude]="convertString(point.latitude)"
+          [longitude]="convertString(point.longitude)">
+        
+          <agm-info-window class="info_w">
+            <h4 class="blue_line">{{ point.title }}</h4>
+            <div [innerHTML]="point.content" class="marker_content"></div>
+            <p>{{ point.points_num }} филиала</p>
+            <div class="place_type" [style.background]="point.pin_color">
+              <img [src]="point.type_img" alt="point.title">
+            </div>
+            <a href="javascript:void(0);" class='stretched' [routerLink]="['/points/', point.id]"></a>
+          </agm-info-window>
+      
+        </agm-marker>
+      </div>
+    </div>
+</agm-map> -->
+
+<div id="leafletMap" class="map_page" (click)="listenMapActivity($event)"></div>
